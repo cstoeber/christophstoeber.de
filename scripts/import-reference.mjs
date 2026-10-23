@@ -53,3 +53,4 @@ for (const [slug,title] of Object.entries(pages)) {
 }
 await writeFile('.reference/assets.json',JSON.stringify(assets,null,2));
 console.log(`Imported ${Object.keys(pages).length} pages and ${assets.length} images.`);
+await import('./migrate-event-dates.mjs');

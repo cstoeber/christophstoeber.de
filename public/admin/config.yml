@@ -396,18 +396,40 @@ collections:
           - name: events
             label: Termine
             widget: list
-            summary: "{{fields.date}} – {{fields.venue}}"
+            summary: "{{fields.startDate}} – {{fields.venue}}"
             fields:
-              - name: date
-                label: Datum und Uhrzeit (Anzeige)
-                widget: string
               - name: startDate
-                label: Konzertdatum (für Archiv-Zuordnung)
+                label: Konzertdatum
+                widget: datetime
+                format: YYYY-MM-DD
+                date_format: DD.MM.YYYY
+                time_format: false
+                hint: Die Website schreibt Datum und Uhrzeit automatisch aus.
+              - name: endDate
+                label: Enddatum (bei mehrtägigen Terminen)
                 widget: datetime
                 required: false
                 format: YYYY-MM-DD
                 date_format: DD.MM.YYYY
                 time_format: false
+                default: ""
+              - name: startTime
+                label: Beginn (HH:MM)
+                widget: string
+                required: false
+                default: ""
+                pattern:
+                  - ^$|^([01]?\d|2[0-3]):[0-5]\d$
+                  - Bitte eine Uhrzeit wie 19:30 eintragen.
+                hint: Optional. Zum Beispiel 19:30; „Uhr“ wird automatisch ergänzt.
+              - name: endTime
+                label: Ende (HH:MM)
+                widget: string
+                required: false
+                default: ""
+                pattern:
+                  - ^$|^([01]?\d|2[0-3]):[0-5]\d$
+                  - Bitte eine Uhrzeit wie 21:00 eintragen.
               - name: venue
                 label: Veranstaltungsort
                 widget: string

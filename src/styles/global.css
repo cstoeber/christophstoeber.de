@@ -43,11 +43,12 @@ nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: 
 .prose a { overflow-wrap: anywhere; }
 .prose img { display: block; }
 .page-copy:empty { display: none; }
-.unterricht > .page-copy { max-width: 780px; }
+.unterricht > .page-copy, .lebenslauf > .page-copy { max-width: 780px; }
 .page-copy h2:first-child { margin-top: 0; }
-.image-text { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-.image-text img { width: 100%; }
-.image-text figcaption, .project-section figcaption { display: grid; gap: 2px; font: 12px/1.6 'Karla', sans-serif; color: var(--muted); margin-top: 10px; }
+.prose .page-copy img, .prose .project-richtext img { width: auto; height: auto; max-width: min(100%, 640px); max-height: 560px; object-fit: contain; margin: 32px auto; }
+.prose .richtext-image { max-width: 640px; margin: 32px auto; text-align: center; }
+.prose .richtext-image img { margin-block: 0; }
+.richtext-image figcaption, .project-section figcaption { display: grid; gap: 2px; font: 12px/1.6 'Karla', sans-serif; color: var(--muted); margin-top: 10px; }
 .projects-list { display: grid; gap: 85px; }
 .project-section { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 48px; }
 .project-section figure img { width: 100%; }
@@ -132,7 +133,7 @@ footer a { text-decoration: none; }
   nav a { font-size: 15px; padding-block: 12px; }
   nav li + li { border-top: 1px solid var(--line); }
   .content { padding-top: 30px; padding-bottom: 65px; }
-  .project-section, .image-text { gap: 28px; }
+  .project-section { gap: 28px; }
   .price-grid { gap: 24px; }
 }
 @media (max-width: 650px) {
@@ -144,7 +145,7 @@ footer a { text-decoration: none; }
   .content { padding-top: 20px; }
   h1 { margin-bottom: 36px; }
   h2 { margin-top: 36px; }
-  .project-section, .image-text, .event, .media-grid { grid-template-columns: 1fr; }
+  .project-section, .event, .media-grid { grid-template-columns: 1fr; }
   .projects-list { gap: 55px; }
   .project-section { gap: 25px; }
   .project-copy h2 { margin-bottom: 20px; }

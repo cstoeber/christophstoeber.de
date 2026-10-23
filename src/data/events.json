@@ -1,253 +1,325 @@
 {
   "events": [
     {
-      "date": "2.9.2024, 19h-23h",
       "startDate": "2024-09-02",
+      "endDate": "",
+      "startTime": "19:00",
+      "endTime": "23:00",
       "venue": "Pantheon, Bonn",
       "description": "Beethoven Piano Club, Klavierduo Bauerecker Stöber",
       "links": []
     },
     {
-      "date": "14.9.2024, 20h",
       "startDate": "2024-09-14",
+      "endDate": "",
+      "startTime": "20:00",
+      "endTime": "",
       "venue": "netzwerk seilerei, Frankfurt am Main",
       "description": "four handed, Klavierduo Bauerecker Stöber",
       "links": []
     },
     {
-      "date": "23.10.2024, 20h",
       "startDate": "2024-10-23",
+      "endDate": "",
+      "startTime": "20:00",
+      "endTime": "",
       "venue": "Kunsthalle, Bielefeld",
       "description": "MASSEN von Eloain Hübner, electronic ID",
       "links": []
     },
     {
-      "date": "29.11.2024, 20h",
       "startDate": "2024-11-29",
+      "endDate": "",
+      "startTime": "20:00",
+      "endTime": "",
       "venue": "Tanzfaktur, Köln",
       "description": "Zwischenmahlzeit, Ensemble uBu",
       "links": []
     },
     {
-      "date": "30.11.2024, 20h",
       "startDate": "2024-11-30",
+      "endDate": "",
+      "startTime": "20:00",
+      "endTime": "",
       "venue": "Tanzfaktur, Köln",
       "description": "Zwischenmahlzeit, Ensemble uBu",
       "links": []
     },
     {
-      "date": "18.1.2024, 20h",
       "startDate": "2024-01-18",
+      "endDate": "",
+      "startTime": "20:00",
+      "endTime": "",
       "venue": "Zionskirche Bethel, Bielefeld",
       "description": "four handed beim Frakzionen Festival, Klavierduo Bauerecker Stöber",
       "links": []
     },
     {
-      "date": "17.11.2023, 19h30",
       "startDate": "2023-11-17",
+      "endDate": "",
+      "startTime": "19:30",
+      "endTime": "",
       "venue": "BIOS Inn, Köln",
       "description": "Musical Effi Briest, Rochus-Chor Köln",
       "links": []
     },
     {
-      "date": "18.11.2023, 19h30",
       "startDate": "2023-11-18",
+      "endDate": "",
+      "startTime": "19:30",
+      "endTime": "",
       "venue": "BIOS Inn, Köln",
       "description": "Musical Effi Briest, Rochus-Chor Köln",
       "links": []
     },
     {
-      "date": "19.11.2023, 17h00",
       "startDate": "2023-11-19",
+      "endDate": "",
+      "startTime": "17:00",
+      "endTime": "",
       "venue": "BIOS Inn, Köln",
       "description": "Musical Effi Briest, Rochus-Chor Köln",
       "links": []
     },
     {
-      "date": "24.11.2023, 19h30",
       "startDate": "2023-11-24",
+      "endDate": "",
+      "startTime": "19:30",
+      "endTime": "",
       "venue": "BIOS Inn, Köln",
       "description": "Musical Effi Briest, Rochus-Chor Köln",
       "links": []
     },
     {
-      "date": "25.11.2023, 19h30",
       "startDate": "2023-11-25",
+      "endDate": "",
+      "startTime": "19:30",
+      "endTime": "",
       "venue": "BIOS Inn, Köln",
       "description": "Musical Effi Briest, Rochus-Chor Köln",
       "links": []
     },
     {
-      "date": "26.11.2023, 17h30",
       "startDate": "2023-11-26",
+      "endDate": "",
+      "startTime": "17:30",
+      "endTime": "",
       "venue": "BIOS Inn, Köln",
       "description": "Musical Effi Briest, Rochus-Chor Köln",
       "links": []
     },
     {
-      "date": "1.12.2023, 20h00",
       "startDate": "2023-12-01",
+      "endDate": "",
+      "startTime": "20:00",
+      "endTime": "",
       "venue": "Tanzfaktur, Köln",
       "description": "Ensemble Ubu, Mutants in Music II: Becoming Ubu. Konzertperfomance",
       "links": []
     },
     {
-      "date": "1.12.2023, 20h00",
       "startDate": "2023-12-01",
+      "endDate": "",
+      "startTime": "20:00",
+      "endTime": "",
       "venue": "Tanzfaktur, Köln",
       "description": "Ensemble Ubu, Mutants in Music II: Becoming Ubu. Konzertperfomance",
       "links": []
     },
     {
-      "date": "3.9.2023, 20h00",
       "startDate": "2023-09-03",
+      "endDate": "",
+      "startTime": "20:00",
+      "endTime": "",
       "venue": "Lab, Frankfurt",
       "description": "Ensemble Ubu, Mutants in Music II: Becoming Ubu. Konzertperfomance",
       "links": []
     },
     {
-      "date": "5.9.2023, 20h00",
       "startDate": "2023-09-05",
+      "endDate": "",
+      "startTime": "20:00",
+      "endTime": "",
       "venue": "Resonanzraum, Hamburg",
       "description": "Ensemble Ubu, Mutants in Music II: Becoming Ubu. Konzertperfomance",
       "links": []
     },
     {
-      "date": "12.09.2020, 20h00",
       "startDate": "2020-09-12",
+      "endDate": "",
+      "startTime": "20:00",
+      "endTime": "",
       "venue": "Alte Feuerwache, Köln",
       "description": "Ubu. Mitwirkung beim Release-Konzert der Porträt-CD von Huihui Cheng",
       "links": []
     },
     {
-      "date": "14.3.2021",
       "startDate": "2021-03-14",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Beethovenhaus, Bonn",
       "description": "Vollendet|Unvollendet mit Ubu",
       "links": []
     },
     {
-      "date": "5.5.2021",
       "startDate": "2021-05-05",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Köln",
       "description": "Kollektiv3:6Köln\n\nKonzert des Kompositionswettbewerbs im Rahmen von Acht Brücken",
       "links": []
     },
     {
-      "date": "6.9.2019",
       "startDate": "2019-09-06",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Köln",
       "description": "TASTE _ this piano is not prepared _ 2019\n\n30 Minuten Solo am Ebertplatz in Köln\n\nStücke von Tom Johnson und Improvisation",
       "links": []
     },
     {
-      "date": "11.10.2019",
       "startDate": "2019-10-11",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "HfMT Köln",
       "description": "Abschlusskonzert von Ramòn Gardella\n\nDrama von V. Globokar",
       "links": []
     },
     {
-      "date": "23.10.2019",
       "startDate": "2019-10-23",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Alte Feuerwache, Köln",
       "description": "hand werk\n\nhw19c_#2 Kölner Geklingel",
       "links": []
     },
     {
-      "date": "8.11.2019",
       "startDate": "2019-11-08",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Musikhochschule Hanns Eisler, Berlin",
       "description": "uBu\n\nPreisträgerkonzert Pergamenschikow Wettbewerb\n\nUraufführung N.N. von Huihui Cheng für Klaviertrio und Tänzer",
       "links": []
     },
     {
-      "date": "13.11.2019",
       "startDate": "2019-11-13",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Tonali-Saal, Hamburg",
       "description": "uBu\n\nMusik in den Häusern der Stadt\n\nVollendet Unvollendet - Liedfragmente von Schubert und Kurtág",
       "links": []
     },
     {
-      "date": "15.11.2019",
       "startDate": "2019-11-15",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Konservatorium, Athen",
       "description": "uBu\n\nStücke von Michael Denhoff und Bernd Alois Zimmermann",
       "links": []
     },
     {
-      "date": "12.12.2019",
       "startDate": "2019-12-12",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Köln",
       "description": "Premiere Musical Der fliegende Holländer\n\nJugendchor St. Rochus",
       "links": []
     },
     {
-      "date": "13.12.2019",
       "startDate": "2019-12-13",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Köln",
       "description": "Musical Der fliegende Holländer\n\nJugendchor St. Rochus",
       "links": []
     },
     {
-      "date": "14.12.2019",
       "startDate": "2019-12-14",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Köln",
       "description": "Musical Der fliegende Holländer\n\nJugendchor St. Rochus",
       "links": []
     },
     {
-      "date": "15.12.2019",
       "startDate": "2019-12-15",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Köln",
       "description": "Musical Der fliegende Holländer\n\nJugendchor St. Rochus",
       "links": []
     },
     {
-      "date": "4.9.-17.9.2017",
-      "startDate": "",
+      "startDate": "2017-09-04",
+      "endDate": "2017-09-17",
+      "startTime": "",
+      "endTime": "",
       "venue": "Tel Aviv, Israel",
       "description": "COUCH POTATOES\n\nhand werk in Israel Konzert und Musiktheaterproduktion",
       "links": []
     },
     {
-      "date": "18.10.-25.10.2017",
-      "startDate": "",
+      "startDate": "2017-10-18",
+      "endDate": "2017-10-25",
+      "startTime": "",
+      "endTime": "",
       "venue": "Shanghai, China",
       "description": "The Hunger Artist\n\nhand werk in Shanghai Musiktheaterproduktion von Yang Song, mit Hendrik Vogt, Ashley Morgan",
       "links": []
     },
     {
-      "date": "31.10.2017",
       "startDate": "2017-10-31",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "BKA Theater, Berlin",
       "description": "COMMUNIO Lecture-Konzert von hand werk im Rahmen der Konzertreihe Unerhörte Musik",
       "links": []
     },
     {
-      "date": "8.1.2018",
       "startDate": "2018-01-08",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Porgy & Bess, Wien",
       "description": "TISCHE\n\nhand werk in Wien",
       "links": []
     },
     {
-      "date": "9.1.2018",
       "startDate": "2018-01-09",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "NN, Graz",
       "description": "TISCHE\n\nhand werk in Graz",
       "links": []
     },
     {
-      "date": "15.7.2017",
       "startDate": "2017-07-15",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Köln, Alte Feuerwache",
       "description": "Présence\n\nTanzperformance mit Trio uBu und 3 Tänzern auf Grundlage von Présence von Bernd Alois Zimmermann und dem 3. Klaviertrio von Michael Denhoff\n\nRegie: Anna Neubert\n\nChoreografie: Yves Ytier",
       "links": []
     },
     {
-      "date": "12.7.2017",
       "startDate": "2017-07-12",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Köln, Domforum",
       "description": "TRAVEL MUSICA\n\nEin Projekt, das sich zum Ziel gesetzt hat, weiterhin die Werke des verstorbenen experimentellen Künstler/Komponisten Yuya Honda (1977-2004) zum Leben zu erwecken und so einer breiten Öffentlichkeit vorzustellen.\n\nhttp://travelmusica.org/",
       "links": [
@@ -258,36 +330,46 @@
       ]
     },
     {
-      "date": "25.6.2017",
       "startDate": "2017-06-25",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "HfMT Köln",
       "description": "Musik und Utopie\n\nGemeinsam mit Studierenden der HfmT Köln werden Stücke\n\nvon Kagel, Schöllhorn, Rojko, Rewsky, Risset, Holliger und Schumann zur Aufführung gebracht.\n\nAußerdem spiele ich ein neues Stück von Jakob Lorenz in der Besetzung pno, vl, vc.",
       "links": []
     },
     {
-      "date": "23.6.2017",
       "startDate": "2017-06-23",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Köln",
       "description": "Glencore\n\nTanzperformance mit hand werk, dem MD Kollektiv und Gregor Schwellenbach",
       "links": []
     },
     {
-      "date": "22.6.2017",
       "startDate": "2017-06-22",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Wuppertal",
       "description": "Musik und Utopie\n\nGemeinsam mit Studierenden der HfmT Köln werden Stücke\n\nvon Kagel, Schöllhorn, Rojko, Rewsky, Risset, Holliger und Schumann zur Aufführung gebracht.\n\nNeues Stück von Jakob Lorenz in der Besetzung pno, vl, vc",
       "links": []
     },
     {
-      "date": "7.6.2017",
       "startDate": "2017-06-07",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Bonn",
       "description": "Présence\n\nTanzperformance mit Trio uBu und 3 Tänzern\n\nAuf Grundlage von Présence von Bernd Alois Zimmermann und dem 3. Klaviertrio von Michael Denhoff\n\nRegie: Anna Neubert\n\nChoreografie: Yves Ytier",
       "links": []
     },
     {
-      "date": "18.5.2017, 20 Uhr",
       "startDate": "2017-05-18",
+      "endDate": "",
+      "startTime": "20:00",
+      "endTime": "",
       "venue": "Ursulinenkirche, Köln",
       "description": "Wege am Abgrund Kammermusik von Friedrich Jaecker, Michael Veltman, Francisco Concha Goldschmidt, Mariano Etkin und John Cage für Mezzosopran, Flöte/Altflöte, Bassklarinette, Viola, Kontrabass, Vibraphon/Schlagzeug und Klavier Ensemble aus Studierenden und Gästen der HfMT Köln\n\nZur Veranstaltungsseite",
       "links": [
@@ -298,29 +380,37 @@
       ]
     },
     {
-      "date": "14.2.2017",
       "startDate": "2017-02-14",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Kammermusiksaal der HfMT Köln",
       "description": "Matinée Interpretation Neue Musik\n\nu.a.Lieder von Friedrich Schenker mit Rose Weissgerber",
       "links": []
     },
     {
-      "date": "2.2.2017",
       "startDate": "2017-02-02",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Konzertsaal der HfMT Köln",
       "description": "Auf-Zu\n\nKonzertprojekt in Kooperation mit der Anna Freud-Förderschule in Köln.",
       "links": []
     },
     {
-      "date": "10.12.2016",
       "startDate": "2016-12-10",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Köln, Konzertsaal Deutschlandfunk",
       "description": "30 Jahre Edition Zeitgenössische Musik",
       "links": []
     },
     {
-      "date": "8.12.2016",
       "startDate": "2016-12-08",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Köln, Stadtgarten",
       "description": "Tripclubbing\n\nhand werk spielt Stücke von Bernard Lang, Niklas Seidl und Cathy van Eck",
       "links": [
@@ -331,8 +421,10 @@
       ]
     },
     {
-      "date": "2.12.2016",
       "startDate": "2016-12-02",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Köln, KOMED Saal",
       "description": "Werft\n\nhand werk spielt im Rahmen des Werft Festivals Stücke von Francesco Filidei, Löffler, Mark Barden",
       "links": [
@@ -343,22 +435,28 @@
       ]
     },
     {
-      "date": "1.12.2016",
       "startDate": "2016-12-01",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Köln, Konzertsaal der HfMT",
       "description": "Klassenabend\n\ndes Masterstudiengangs Interpretation Neue Musik. Nishimura: Dance for 8 Hands.",
       "links": []
     },
     {
-      "date": "25.11.2016",
       "startDate": "2016-11-25",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Köln, Alte Feuerwache",
       "description": "Communio\n\nLecturekonzert. hand werk spielt Stücke von Ablinger, Huber, Järnegard, Seidl, Marino\n\nUmrahmt werden diese Stücke von kurzen sozialwissenschaftlichen Vorträgen.",
       "links": []
     },
     {
-      "date": "13.11.2016",
       "startDate": "2016-11-13",
+      "endDate": "",
+      "startTime": "",
+      "endTime": "",
       "venue": "Engelskirchen, Schloss Ehreshoven",
       "description": "Liederabend\n\nmit dem Sänger Arndt Schumacher. Gustav Mahler: Rückert-Lieder, L. van Beethoven: Lieder an die ferne Geliebte, R. Schumann: Dichterliebe",
       "links": []

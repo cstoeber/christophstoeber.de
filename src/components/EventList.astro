@@ -1,6 +1,6 @@
 ---
-interface Event {date:string;venue:string;description:string;links?:{label:string;url:string}[];}
-interface Props {events:Event[];}
+import {formatEventDate,type ConcertEvent} from '../lib/events';
+interface Props {events:ConcertEvent[];}
 const {events}=Astro.props;
 ---
-<div class="events">{events.map(event=><div class="event"><div><p>{event.date}</p><p class="event-venue">{event.venue}</p></div><div>{event.description.split('\n\n').map(text=><p>{text}</p>)}{event.links?.map(link=><p><a href={link.url}>{link.label}</a></p>)}</div></div>)}</div>
+<div class="events">{events.map(event=><div class="event"><div><p><time datetime={`${event.startDate}${event.startTime?`T${event.startTime}`:''}`}>{formatEventDate(event)}</time></p><p class="event-venue">{event.venue}</p></div><div>{event.description.split('\n\n').map(text=><p>{text}</p>)}{event.links?.map(link=><p><a href={link.url}>{link.label}</a></p>)}</div></div>)}</div>
