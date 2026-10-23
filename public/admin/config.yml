@@ -45,8 +45,6 @@ collections:
                     value: /musik-videos/
                   - label: Unterricht
                     value: /unterricht/
-                  - label: Astronaut
-                    value: /astronaut/
   - name: projects
     label: Projekte
     label_singular: Projekt
@@ -72,6 +70,12 @@ collections:
         label: Sichtbar
         widget: boolean
         default: true
+      - name: showMediaLink
+        label: Verknüpfte Medien verlinken
+        widget: boolean
+        default: true
+        hint: Zeigt automatisch Links zu den sichtbaren Medienabschnitten dieses
+          Projekts.
       - name: image
         label: Bild
         widget: image
@@ -146,6 +150,58 @@ collections:
                 value: spotify
               - label: Kein Icon
                 value: none
+  - name: mediaSections
+    label: Medienabschnitte
+    label_singular: Medienabschnitt
+    folder: src/content/media
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}}"
+    sortable_fields:
+      - order
+      - title
+    fields:
+      - name: title
+        label: Überschrift
+        widget: string
+      - name: order
+        label: Reihenfolge
+        widget: number
+        value_type: int
+        min: 0
+        default: 1
+      - name: published
+        label: Sichtbar
+        widget: boolean
+        default: true
+      - name: project
+        label: Projekt (optional)
+        widget: relation
+        required: false
+        collection: projects
+        search_fields:
+          - title
+        value_field: "{{slug}}"
+        display_fields:
+          - title
+        hint: Leer lassen für einen freien Abschnitt. Bei Zuordnung wird der Abschnitt
+          automatisch beim Projekt verlinkt, sofern dort aktiviert.
+      - name: body
+        label: Beschreibung
+        widget: markdown
+        required: false
+      - name: videos
+        label: Videos & Musik
+        widget: list
+        summary: "{{fields.title}}"
+        fields:
+          - name: title
+            label: Titel
+            widget: string
+          - name: url
+            label: Einbettungs-URL
+            widget: string
   - name: pages
     label: Seiten
     files:
@@ -268,17 +324,6 @@ collections:
             label: Inhalt
             widget: markdown
             required: false
-          - name: videos
-            label: Videos & Musik
-            widget: list
-            required: false
-            fields:
-              - name: title
-                label: Titel
-                widget: string
-              - name: url
-                label: Einbettungs-URL
-                widget: string
       - name: unterricht
         label: Unterricht
         file: src/content/pages/unterricht.md
@@ -309,31 +354,6 @@ collections:
               - name: subject
                 label: E-Mail-Betreff
                 widget: string
-          - name: videos
-            label: Videos & Musik
-            widget: list
-            required: false
-            fields:
-              - name: title
-                label: Titel
-                widget: string
-              - name: url
-                label: Einbettungs-URL
-                widget: string
-      - name: astronaut
-        label: Astronaut
-        file: src/content/pages/astronaut.md
-        fields:
-          - name: title
-            label: Titel
-            widget: string
-          - name: description
-            label: Beschreibung für Suchmaschinen
-            widget: text
-          - name: body
-            label: Inhalt
-            widget: markdown
-            required: false
           - name: videos
             label: Videos & Musik
             widget: list

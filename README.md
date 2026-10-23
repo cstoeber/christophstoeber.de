@@ -32,6 +32,7 @@ Der Build prüft die Astro-Dateien und erzeugt eine statische Website in `dist/`
 
 - `src/content/pages/*.md`: Seiten, Suchmaschinenbeschreibungen, Startbild und Medien.
 - `src/content/projects/*.md`: einzeln im CMS anlegbare Projekte mit Bild, Alt-Text, Caption, Copyright, Text, Links, Reihenfolge und Sichtbarkeit.
+- `src/content/media/*.md`: im CMS unter „Medienabschnitte“ pflegbare Abschnitte mit Überschrift, Richtext-Beschreibung, Videos/Musik, Reihenfolge und Sichtbarkeit. Die optionale Projektzuordnung erzeugt beim Projekt automatisch einen Link zum Abschnitt auf `/musik-videos/`. Über „Verknüpfte Medien verlinken“ lässt sich dieser Link pro Projekt abschalten. Ohne Zuordnung steht der Abschnitt frei auf der Medienseite.
 
 Projektlinks haben im CMS ein Icon-Feld: automatisch aus der URL, Website, E-Mail, Instagram, YouTube, SoundCloud, Linktree, Spotify oder kein Icon. URL, Linktext und optionaler Präfix sind pro Link bearbeitbar. Unterricht und Footer verwenden denselben Kontaktbutton mit Briefumschlag und „Kontakt aufnehmen“; der Unterrichtsbutton ergänzt den E-Mail-Betreff.
 
@@ -58,6 +59,8 @@ Bilder im Richtext bleiben an ihrer eingefügten Position. Auf Desktop (ab 960 P
 Der Facelift bleibt monochrom mit den bestehenden Schriften Karla und Merriweather. Die Startseite bleibt beim Originalfoto; die Navigation priorisiert Unterricht und Projekte. Der Titel führt zurück zur Startseite. Unterhalb von 960 Pixeln ersetzt das Mobilmenü die einzeilige Navigation.
 
 „Produktion“ wird als Projekt inklusive SoundCloud-Player gepflegt. `/produktion/` leitet nach `/projekte/#produktion` weiter: mit HTTP 301 auf Netlify über `public/_redirects`, auf sonstigen rein statischen Hosts über die von Astro erzeugte Weiterleitungsseite. Für andere Hoster kann eine entsprechende serverseitige 301-Regel ergänzt werden.
+
+Die frühere Astronaut-Unterseite ist durch den mit dem Projekt verknüpften Medienabschnitt ersetzt. Alle vier Einbettungen sind erhalten; `/astronaut/` leitet dauerhaft nach `/musik-videos/#astronaut` weiter. Astronaut bleibt als Projekt erhalten und wird nicht mehr als eigene Seite im Menü geführt.
 
 Social-Media-Links liegen in den Kontaktdaten und sind dort im CMS pflegbar. Ein eigener zentrierter E-Mail-Button steht unterhalb des Kontaktbereichs. Die Navigation bleibt beim Scrollen am oberen Rand sichtbar. Der öffentliche Anmeldelink wurde entfernt; das CMS bleibt direkt unter `/admin/` erreichbar. Die Unterrichtsseite enthält zusätzlich einen E-Mail-Aufruf mit vorbelegtem Betreff.
 

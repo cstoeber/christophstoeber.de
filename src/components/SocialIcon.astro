@@ -1,6 +1,6 @@
 ---
 interface Props { url: string; icon?: 'auto'|'website'|'email'|'instagram'|'youtube'|'soundcloud'|'linktree'|'spotify'|'none'; }
-const host=new URL(Astro.props.url).hostname.replace(/^www\./,'');
+const host=new URL(Astro.props.url,Astro.site||Astro.url).hostname.replace(/^www\./,'');
 const detected=Astro.props.url.startsWith('mailto:')?'email':host==='instagram.com'?'instagram':host==='youtube.com'||host==='youtu.be'?'youtube':host==='soundcloud.com'?'soundcloud':host==='linktr.ee'?'linktree':host==='open.spotify.com'||host==='spotify.com'?'spotify':'website';
 const icon=Astro.props.icon&&Astro.props.icon!=='auto'?Astro.props.icon:detected;
 ---

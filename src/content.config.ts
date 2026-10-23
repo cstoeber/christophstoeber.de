@@ -18,9 +18,18 @@ const projects = defineCollection({
   loader: glob({ pattern: '*.md', base: './src/content/projects' }),
   schema: z.object({
     title: z.string(), order: z.number().default(0), published: z.boolean().default(true),
+    showMediaLink: z.boolean().default(true),
     image: z.string().default(''), imageAlt: z.string().default(''), caption: z.string().default(''), copyright: z.string().default(''),
     videos: z.array(z.object({title:z.string(),url:z.url()})).default([]),
     links: z.array(z.object({ prefix: z.string().default(''), label: z.string(), url: z.url(), icon:z.enum(['auto','website','email','instagram','youtube','soundcloud','linktree','spotify','none']).default('auto') })).default([]),
   }),
 });
-export const collections = { pages, legal, projects };
+const mediaSections = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/media' }),
+  schema: z.object({
+    title: z.string(), order: z.number().default(0), published: z.boolean().default(true),
+    project: z.string().nullish().transform(value=>value||''),
+    videos: z.array(z.object({title:z.string(),url:z.url()})).default([]),
+  }),
+});
+export const collections = { pages, legal, projects, mediaSections };

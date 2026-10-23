@@ -7,6 +7,7 @@ import editorialLayout from '../../scripts/rehype-editorial-layout.mjs';
 const processor=await createMarkdownProcessor({rehypePlugins:[editorialLayout]});
 const entries=(await getCollection('projects')).filter(project=>project.data.published).sort((a,b)=>a.data.order-b.data.order||a.data.title.localeCompare(b.data.title,'de'));
 const projects=await Promise.all(entries.map(async project=>({...project,html:(await processor.render(project.body||'')).code})));
+const mediaSections=(await getCollection('mediaSections')).filter(section=>section.data.published).sort((a,b)=>a.data.order-b.data.order||a.data.title.localeCompare(b.data.title,'de'));
 ---
 <div class="projects-list">
   {projects.map(project=><section class:list={['project-section',{'project-text-only':!project.data.image}]} id={project.id}>
@@ -16,6 +17,7 @@ const projects=await Promise.all(entries.map(async project=>({...project,html:(a
     </figure>}
     <div class="project-copy"><h2>{project.data.title}</h2><div class="project-richtext" set:html={project.html}/>
       {project.data.links.length>0&&<ul class="project-links">{project.data.links.map(link=><li><a href={link.url}><SocialIcon url={link.url} icon={link.icon}/><span>{link.prefix}{link.label}</span></a></li>)}</ul>}
+      {project.data.showMediaLink&&mediaSections.some(section=>section.data.project===project.id)&&<ul class="project-links project-media-links">{mediaSections.filter(section=>section.data.project===project.id).map(section=><li><a href={`/musik-videos/#${section.id}`}><SocialIcon url="/musik-videos/" icon="website"/><span>Musik & Videos: {section.data.title}</span></a></li>)}</ul>}
       {project.data.videos.length>0&&<div class="media-list">{project.data.videos.map(video=><Media {...video}/>)}</div>}
     </div>
   </section>)}

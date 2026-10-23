@@ -1,0 +1,16 @@
+---
+import {getCollection} from 'astro:content';
+import {createMarkdownProcessor} from '@astrojs/markdown-remark';
+import editorialLayout from '../../scripts/rehype-editorial-layout.mjs';
+import Media from './Media.astro';
+const processor=await createMarkdownProcessor({rehypePlugins:[editorialLayout]});
+const entries=(await getCollection('mediaSections')).filter(section=>section.data.published).sort((a,b)=>a.data.order-b.data.order||a.data.title.localeCompare(b.data.title,'de'));
+const sections=await Promise.all(entries.map(async section=>({...section,html:(await processor.render(section.body||'')).code})));
+---
+<div class="media-sections">
+  {sections.map(section=><section class="media-section" id={section.id} aria-labelledby={`media-${section.id}`}>
+    <h2 id={`media-${section.id}`}>{section.data.title}</h2>
+    {section.html&&<div class="project-richtext" set:html={section.html}/>}
+    {section.data.videos.length>0&&<div class="media-list">{section.data.videos.map(video=><Media {...video}/>)}</div>}
+  </section>)}
+</div>

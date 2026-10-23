@@ -1,7 +1,8 @@
 ---
 title: Astronaut
-description: Astronaut ist das Singer-Songwriter-Projekt von Christoph Stöber.
-  Musik und Videos mit deutschen Texten und Einflüssen aus der Neuen Musik.
+order: 2
+published: true
+project: astronaut
 videos:
   - title: Astronaut – Video 2
     url: https://www.youtube-nocookie.com/embed/nM969qQLTA0?wmode=transparent&vq=hd1080
