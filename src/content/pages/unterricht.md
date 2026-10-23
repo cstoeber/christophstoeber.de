@@ -3,12 +3,13 @@ title: Unterricht
 description: "Privater Klavierunterricht in Köln mit Christoph Stöber: für
   Anfänger und Fortgeschrittene, vor Ort oder online. Unterrichtsmodelle, Preise
   und Kontakt."
-videos: []
 inquiry:
   title: Lust auf Klavier?
-  text: "Ob erster Anfang oder Wiedereinstieg: Schreib mir gerne. Gemeinsam finden wir heraus, welcher Unterricht zu dir passt."
+  text: "Ob erster Anfang oder Wiedereinstieg: Schreib mir gerne. Gemeinsam finden
+    wir heraus, welcher Unterricht zu dir passt."
   buttonLabel: Kontakt aufnehmen
   subject: Anfrage zum Klavierunterricht
+videos: []
 ---
 ## Über meinen Unterricht
 
@@ -39,3 +40,5 @@ Von Bach und Beethoven über Klassiker des 20. Jahrhunderts bis zu zeitgenössis
 Unterrichtsort:
 
 Bei euch zu Hause oder bei mir am Flügel in Bickendorf.
+
+![Christoph Stöber mit Sonnenfinsternisbrille](/images/img-20260812-wa0027.jpg "Ich beim Sonnenfinsterniskonzert")
