@@ -10,9 +10,7 @@ inquiry:
   subject: Anfrage zum Klavierunterricht
 videos: []
 ---
-## Über meinen Unterricht
-
-Klavierunterricht in Köln – für Kinder, Jugendliche und Erwachsene
+## Klavierunterricht in Köln – für Kinder, Jugendliche und Erwachsene
 
 Ich biete hochqualifizierten privaten Klavierunterricht in ganz Köln an.
 
