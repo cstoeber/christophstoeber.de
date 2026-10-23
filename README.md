@@ -46,7 +46,9 @@ Unter „Menü → Menüpunkte & Reihenfolge“ lassen sich die Navigationseintr
 - `public/images/`: übernommene Bilder und neue CMS-Uploads.
 - `public/admin/config.yml`: Decap-Konfiguration für `cstoeber/christophstoeber.de`, Branch `main`.
 
-Die bisherigen Konzertdaten wurden unverändert übernommen, auch erkennbare Datums- oder Preisauffälligkeiten der Vorlage. Sie sind vor einer Veröffentlichung redaktionell zu prüfen. Medien stehen auf Desktop in zwei Spalten, auf schmalen Ansichten untereinander. YouTube zeigt vor Aktivierung ein extern geladenes Vorschaubild; Spotify und SoundCloud zeigen lokale Vorschaukacheln. Erst ein Klick lädt den Player. Der Datenschutzentwurf beschreibt dieses Verhalten.
+Die bisherigen Konzertdaten wurden unverändert übernommen, auch erkennbare Datums- oder Preisauffälligkeiten der Vorlage. Sie sind vor einer Veröffentlichung redaktionell zu prüfen. Medien stehen auf Desktop in zwei Spalten, auf schmalen Ansichten untereinander. Spotify-Player werden direkt eingebettet, ohne automatisch die Wiedergabe zu starten. YouTube zeigt vor Aktivierung ein extern geladenes Vorschaubild; SoundCloud zeigt eine lokale Vorschaukachel. Bei diesen beiden Anbietern lädt erst ein Klick den Player. Der Datenschutzentwurf beschreibt dieses Verhalten.
+
+Jeder Medienabschnitt hat eine optionale „Bildergalerie“ im CMS. Pro Bild sind Datei, Alternativtext, Bildunterschrift und Copyright pflegbar. Die Listenreihenfolge bestimmt die Bildreihenfolge. Das Raster zeigt ab 960 Pixel drei, auf Tablets zwei und bis 650 Pixel eine Spalte. Ohne Bilder wird kein Galerieblock ausgegeben.
 
 Im CMS unter „Konzerttermine“ wird das Konzertdatum über den Kalender gewählt. Optional sind Enddatum sowie Beginn und Ende als Uhrzeit im Format HH:MM. Ein zusätzlich ausgeschriebenes Datum ist nicht mehr nötig: Die Website erzeugt beispielsweise „23. Oktober 2026, 19:30 Uhr“, „2. September 2024, 19:00–23:00 Uhr“ oder „4.–17. September 2017“. Alle bisherigen Termine und Uhrzeiten wurden in diese Felder übertragen. Bei mehrtägigen Veranstaltungen steuert das Enddatum die Archivzuordnung.
 

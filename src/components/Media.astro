@@ -6,12 +6,12 @@ const videoId=type==='video'?new URL(url).pathname.split('/').pop():undefined;
 const thumbnail=videoId?`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`:undefined;
 ---
 <div class:list={['media',type]}>
-  <button class:list={['media-preview',{'has-thumbnail':!!thumbnail}]} type="button" data-url={url} data-title={title} data-provider={type} aria-label={`${title} – Wiedergabe aktivieren`}>
+  {type==='spotify'?<iframe src={url} title={title} allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"/>:<button class:list={['media-preview',{'has-thumbnail':!!thumbnail}]} type="button" data-url={url} data-title={title} data-provider={type} aria-label={`${title} – Wiedergabe aktivieren`}>
     {thumbnail&&<img src={thumbnail} alt="" loading="lazy" referrerpolicy="no-referrer"/>}
     <span class="media-play" aria-hidden="true">▶</span>
     <span class="media-caption">{title}</span>
-    {!thumbnail&&<span class="media-provider">{type==='spotify'?'Spotify':'SoundCloud'}</span>}
-  </button>
+    {!thumbnail&&<span class="media-provider">SoundCloud</span>}
+  </button>}
   <noscript><a href={url}>{title} öffnen</a></noscript>
 </div>
 <script>

@@ -29,6 +29,7 @@ const mediaSections = defineCollection({
   schema: z.object({
     title: z.string(), order: z.number().default(0), published: z.boolean().default(true),
     project: z.string().nullish().transform(value=>value||''),
+    images: z.array(z.object({image:z.string(),alt:z.string(),caption:z.string().default(''),copyright:z.string().default('')})).nullish().transform(value=>value||[]),
     videos: z.array(z.object({title:z.string(),url:z.url()})).default([]),
   }),
 });

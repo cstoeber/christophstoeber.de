@@ -8,7 +8,7 @@ Bei Fragen zum Datenschutz wenden Sie sich an Christoph Stöber, Venloer Straße
 
 ## Website und externe Inhalte
 
-Die Website verwendet keine eigenen Analysewerkzeuge und lädt Schriftarten sowie eigene Bilder vom eigenen Server. Für YouTube-Videos werden Vorschaubilder von YouTube geladen; dabei wird bereits eine Verbindung zum Bildserver des Anbieters hergestellt. Die Player von YouTube, Spotify und SoundCloud werden erst nach einem Klick auf die jeweilige Vorschau geladen. Bei Verbindungen zu diesen Anbietern wird insbesondere Ihre IP-Adresse übermittelt; weitere Daten können gemäß deren Datenschutzhinweisen verarbeitet werden.
+Die Website verwendet keine eigenen Analysewerkzeuge und lädt Schriftarten sowie eigene Bilder vom eigenen Server. Für YouTube-Videos werden Vorschaubilder von YouTube geladen; dabei wird bereits eine Verbindung zum Bildserver des Anbieters hergestellt. Spotify-Player werden direkt beim Seitenaufruf geladen. Die Player von YouTube und SoundCloud werden erst nach einem Klick auf die jeweilige Vorschau geladen. Bei Verbindungen zu diesen Anbietern wird insbesondere Ihre IP-Adresse übermittelt; weitere Daten können gemäß deren Datenschutzhinweisen verarbeitet werden.
 
 Die Datenschutzhinweise der Anbieter finden Sie bei [Google/YouTube](https://policies.google.com/privacy?hl=de), [Spotify](https://www.spotify.com/de/legal/privacy-policy/) und [SoundCloud](https://soundcloud.com/pages/privacy).
 

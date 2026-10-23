@@ -19,6 +19,7 @@ const config={
       field('title','Überschrift'),field('order','Reihenfolge','number',{value_type:'int',min:0,default:1}),field('published','Sichtbar','boolean',{default:true}),
       field('project','Projekt (optional)','relation',{required:false,collection:'projects',search_fields:['title'],value_field:'{{slug}}',display_fields:['title'],hint:'Leer lassen für einen freien Abschnitt. Bei Zuordnung wird der Abschnitt automatisch beim Projekt verlinkt, sofern dort aktiviert.'}),
       field('body','Beschreibung','markdown',{required:false}),
+      field('images','Bildergalerie','list',{label_singular:'Bild',required:false,default:[],collapsed:false,summary:'{{fields.alt}}',hint:'Optional. Maximal drei Spalten auf Desktop, zwei auf Tablets und eine auf Mobilgeräten. Reihenfolge per Drag-and-drop ändern.',fields:[field('image','Bild','image'),field('alt','Bildbeschreibung (Barrierefreiheit)'),field('caption','Bildunterschrift','string',{required:false,default:''}),field('copyright','Copyright / Fotografie','string',{required:false,default:''})]}),
       field('videos','Videos & Musik','list',{label_singular:'Medium',required:false,default:[],collapsed:false,summary:'{{fields.title}}',hint:'Titel und Einbettungs-URL hier bearbeiten, Einträge hinzufügen oder löschen und per Drag-and-drop sortieren.',fields:[field('title','Titel'),field('url','Einbettungs-URL')]})
     ]},
     {name:'pages',label:'Seiten',files:Object.entries(pages).map(([name,label])=>({name,label,file:`src/content/pages/${name}.md`,fields:[

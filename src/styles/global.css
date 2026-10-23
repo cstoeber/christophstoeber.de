@@ -125,6 +125,16 @@ h6 { font-size: var(--heading-6); }
 .media-sections { display: grid; gap: 48px; }
 .media-section { min-width: 0; scroll-margin-top: 160px; }
 .media-section > h2 { margin-top: 0; }
+.media-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-block: 30px; }
+.media-gallery figure { min-width: 0; }
+.prose .media-gallery img { display: block; width: 100%; height: auto; }
+.media-gallery figcaption { display: grid; gap: 2px; margin-top: 10px; font: 12px/1.6 'Karla', sans-serif; color: var(--muted); overflow-wrap: anywhere; }
+@media (min-width: 651px) and (max-width: 959px) {
+  .media-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 650px) {
+  .media-gallery { grid-template-columns: minmax(0, 1fr); }
+}
 .media { background: #f7f7f7; overflow: hidden; aspect-ratio: 16 / 9; }
 .media.spotify { aspect-ratio: auto; height: 352px; }
 .media.soundcloud { aspect-ratio: auto; height: 450px; }
