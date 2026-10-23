@@ -73,11 +73,10 @@ nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: 
 .upcoming-events h2 { margin-top: 0; }
 .recent-events:first-child h2 { margin-top: 0; }
 .event-archive { margin-top: 64px; }
-.event-archive summary { cursor: pointer; padding-block: 24px; font: 22px/1.5 'Karla', sans-serif; }
-.event-archive summary { list-style: none; display: flex; align-items: center; gap: 12px; }
+.event-archive summary { cursor: pointer; width: 44px; min-height: 44px; padding-block: 18px; list-style: none; display: flex; align-items: center; justify-content: center; }
 .event-archive summary::-webkit-details-marker { display: none; }
-.event-archive summary::before { content: ''; width: 5px; height: 5px; flex: 0 0 5px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: rotate(-45deg); }
-.event-archive[open] summary::before { transform: rotate(45deg); }
+.event-archive summary::before { content: ''; width: 5px; height: 5px; flex: 0 0 5px; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: rotate(45deg); }
+.event-archive[open] summary::before { transform: rotate(225deg); }
 .event-archive[open] summary { margin-bottom: 12px; }
 .media-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; margin-block: 30px; }
 .media { background: #f7f7f7; overflow: hidden; aspect-ratio: 16 / 9; }
