@@ -14,13 +14,13 @@ videos: []
 
 Ich biete hochqualifizierten privaten Klavierunterricht in ganz Köln an.
 
-Über mich:
+### **Über mich**
 
 Ich bin klassisch ausgebildeter Pianist und Klavierpädagoge mit langjähriger Unterrichtserfahrung. 2016 habe ich mein Klavierstudium an der Musikhochschule Köln erfolgreich abgeschlossen. Als Mitglied von Ensembles und Bands hat es mich durch Europa, in die USA und den Nahen Osten geführt.
 
-Mein Unterricht:
+### **Mein Unterricht**
 
-Ich unterrichte Anfänger genauso wie Fortgeschrittene. Vom ersten Ton bis zur Studiumsvorbereitung. Dabei orientiere ich mich sensibel an den individuellen Interessen und der Motivation meiner Schülerinnen und Schüler. Je nach Wunsch und Bedarf vermittle ich u. a.:
+Ich unterrichte **Anfänger genauso wie Fortgeschrittene**. Vom ersten Ton bis zur Studiumsvorbereitung. Dabei orientiere ich mich sensibel an den individuellen Interessen und der Motivation meiner Schülerinnen und Schüler. Je nach Wunsch und Bedarf vermittle ich u. a.:
 
 * Notenlesen
 * Improvisation
@@ -30,10 +30,10 @@ Ich unterrichte Anfänger genauso wie Fortgeschrittene. Vom ersten Ton bis zur S
 * Liedbegleitung
 * Effektive Übetechniken
 
-Im Vordergrund stehen dabei immer die gemeinsamen Musizieren und dem persönlichen Ausdruck und der individuelle Fortschritt.
+Im Vordergrund stehen dabei immer die **gemeinsamen Musizieren** und dem persönlichen Ausdruck und der individuelle Fortschritt.
 
 Von Bach und Beethoven über Klassiker des 20. Jahrhunderts bis zu zeitgenössischer Musik von Ludovico Einaudi und Yann Tiersen oder aktueller Popmusik: Ich richte mich nach euch und euren Interessen.
 
-Unterrichtsort:
+### **Unterrichtsort**
 
 Bei euch zu Hause oder bei mir am Flügel in Bickendorf.
