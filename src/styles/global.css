@@ -4,7 +4,7 @@
   background: #fff;
   color-scheme: light;
   font-synthesis: none;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.85;
   --muted: #737373;
   --line: #e5e5e5;
@@ -24,10 +24,10 @@ button { font: inherit; }
 img { max-width: 100%; height: auto; }
 figure { margin: 0; }
 h1, h2, h3, h4 { font-family: 'Karla', Arial, sans-serif; color: #282828; font-weight: 400; line-height: 1.2; }
-h1 { font-size: clamp(38px, 5vw, 58px); letter-spacing: -.035em; margin: 0 0 56px; }
-h2 { font-size: clamp(27px, 3vw, 34px); letter-spacing: -.02em; margin: 48px 0 24px; }
-h3 { font-size: 24px; margin: 32px 0 22px; }
-h4 { font-size: 21px; margin: 0 0 25px; }
+h1 { font-size: 36px; font-weight: 700; letter-spacing: -.025em; margin: 0 0 32px; }
+h2 { font-size: 26px; letter-spacing: -.02em; margin: 40px 0 22px; }
+h3 { font-size: 21px; margin: 28px 0 20px; }
+h4 { font-size: 19px; margin: 0 0 22px; }
 .header-inner, .container, .content { max-width: var(--width); margin-inline: auto; padding-inline: 32px; }
 .header-inner { position: relative; padding-top: 24px; padding-bottom: 20px; }
 .site-title { display: inline-block; font: 400 29px/1.3 'Karla', Arial, sans-serif; letter-spacing: -.025em; text-decoration: none; margin-bottom: 18px; }
@@ -44,8 +44,8 @@ nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: 
 .prose :is(strong, b) { font-weight: 700; }
 .prose :is(em, i) { font-style: italic; }
 :is(.page-copy, .project-richtext) :is(h5, h6) { font-family: 'Karla', Arial, sans-serif; font-weight: 400; line-height: 1.3; margin: 28px 0 16px; }
-:is(.page-copy, .project-richtext) h5 { font-size: 19px; }
-:is(.page-copy, .project-richtext) h6 { font-size: 17px; }
+:is(.page-copy, .project-richtext) h5 { font-size: 17px; }
+:is(.page-copy, .project-richtext) h6 { font-size: 16px; }
 :is(.page-copy, .project-richtext) :is(ul, ol) { margin: 0 0 24px; padding-inline-start: 1.6em; }
 :is(.page-copy, .project-richtext) li + li { margin-top: 6px; }
 :is(.page-copy, .project-richtext) li > :is(ul, ol) { margin-block: 6px 0; }
@@ -156,14 +156,16 @@ footer a { text-decoration: none; }
   .price-grid { gap: 24px; }
 }
 @media (max-width: 650px) {
-  :root { font-size: 15px; line-height: 1.85; }
+  :root { font-size: 14px; line-height: 1.85; }
   .header-inner, .container, .content { padding-inline: 22px; }
   .header-inner { padding-top: 27px; }
   .site-title { font-size: 23px; max-width: 265px; }
   .menu-toggle { right: 22px; top: 30px; }
   .content { padding-top: 20px; }
-  h1 { margin-bottom: 36px; }
-  h2 { margin-top: 36px; }
+  h1 { font-size: 30px; margin-bottom: 28px; }
+  h2 { font-size: 23px; margin-top: 32px; }
+  h3 { font-size: 19px; }
+  h4 { font-size: 18px; }
   .project-section, .event, .media-grid { grid-template-columns: 1fr; }
   .projects-list { gap: 55px; }
   .project-section { gap: 25px; }
