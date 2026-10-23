@@ -11,6 +11,7 @@ import navigation from '../data/navigation.json';
 interface Props { title: string; description?: string; noindex?: boolean; }
 const {title,description='Christoph Stöber – Pianist, Komponist und Klavierpädagoge in Köln.',noindex=false}=Astro.props;
 const canonical=new URL(Astro.url.pathname,Astro.site);
+const titleParts=settings.title.split(/\s+(?:[-–—]|🧑‍🚀)\s+/);
 const searchTitles:Record<string,string>={
   '/':'Christoph Stöber | Pianist & Klavierunterricht in Köln',
   '/unterricht/':'Klavierunterricht in Köln | Christoph Stöber',
@@ -57,7 +58,7 @@ const structuredData={'@context':'https://schema.org','@graph':[
     <a class="skip-link" href="#inhalt">Zum Inhalt</a>
     <header class="header">
       <div class="header-inner">
-        <a class="site-title" href="/" aria-label={`${settings.title} – Start`}>{settings.title}</a>
+        <a class="site-title" href="/" aria-label={`${settings.title} – Start`}>{titleParts.map((part,index)=><>{index>0&&<img class="title-image" src="/images/astronaut-button.png" alt="" width="32" height="32"/>}{part}</>)}</a>
         <button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navigation"><span></span><span></span><span></span></button>
         <nav id="navigation" aria-label="Hauptnavigation">
           <ul>{navigation.items.map(({href,label})=><li><a href={href} aria-current={Astro.url.pathname===href?'page':undefined}>{label}</a></li>)}</ul>
