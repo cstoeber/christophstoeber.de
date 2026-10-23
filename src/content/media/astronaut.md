@@ -13,7 +13,7 @@ images:
     image: /images/whatsapp-image-2026-10-02-at-5.46.58-pm.jpeg
     alt: "Musiker Astronaut mit Glockenspielspieler "
   - caption: ""
-    copyright: Yves Sanwidi
+    copyright: © Yves Sanwidi
     image: /images/img-20250410-wa0014.jpg
     alt: Musiker Astronaut am Klavier mit Handy
 videos:
