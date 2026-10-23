@@ -72,7 +72,7 @@ nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: 
 .event-venue { color: var(--muted); font-size: 14px; }
 .upcoming-events h2 { margin-top: 0; }
 .recent-events:first-child h2 { margin-top: 0; }
-.event-archive { border-top: 1px solid var(--line); margin-top: 64px; }
+.event-archive { margin-top: 64px; }
 .event-archive summary { cursor: pointer; padding-block: 24px; font: 22px/1.5 'Karla', sans-serif; }
 .event-archive summary { list-style: none; display: flex; align-items: center; gap: 12px; }
 .event-archive summary::-webkit-details-marker { display: none; }
