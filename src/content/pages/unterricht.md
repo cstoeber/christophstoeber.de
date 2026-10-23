@@ -4,7 +4,7 @@ description: "Privater Klavierunterricht in Köln mit Christoph Stöber: für
   Anfänger und Fortgeschrittene, vor Ort oder online. Unterrichtsmodelle, Preise
   und Kontakt."
 inquiry:
-  title: Hast du Lust auf Unterricht?
+  title: Lust auf Unterricht?
   text: Schreib mir gerne.
   buttonLabel: Kontakt aufnehmen
   subject: Anfrage zum Klavierunterricht
