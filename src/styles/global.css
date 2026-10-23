@@ -12,7 +12,7 @@
   --accent: #d6b8b3;
   --accent-hover: #c9a49e;
   --accent-ink: #382b2b;
-  --heading-ratio: 1.333;
+  --heading-ratio: 1.25;
   --heading-6: 1rem;
   --heading-5: calc(var(--heading-6) * var(--heading-ratio));
   --heading-4: calc(var(--heading-5) * var(--heading-ratio));
