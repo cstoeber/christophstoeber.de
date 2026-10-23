@@ -1,6 +1,6 @@
 ---
 title: Astronaut
-order: 2
+order: 1
 published: true
 project: astronaut
 videos:
