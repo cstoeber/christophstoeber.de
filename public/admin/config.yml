@@ -1,0 +1,482 @@
+# GitHub-Anmeldung: OAuth-Provider beim Hosting einrichten (siehe README.md).
+backend:
+  name: github
+  repo: cstoeber/christophstoeber.de
+  branch: main
+local_backend: true
+locale: de
+site_url: https://www.christophstoeber.de
+display_url: https://www.christophstoeber.de
+media_folder: public/images
+public_folder: /images
+collections:
+  - name: navigation
+    label: Menü
+    files:
+      - name: navigation
+        label: Menüpunkte & Reihenfolge
+        file: src/data/navigation.json
+        fields:
+          - name: items
+            label: Menüpunkte
+            widget: list
+            summary: "{{fields.label}}"
+            collapsed: true
+            min: 1
+            hint: Einträge per Drag-and-drop verschieben. Die Reihenfolge gilt für Desktop
+              und Mobilmenü.
+            fields:
+              - name: label
+                label: Beschriftung
+                widget: string
+              - name: href
+                label: Zielseite
+                widget: select
+                options:
+                  - label: Start
+                    value: /
+                  - label: Termine
+                    value: /termine/
+                  - label: Lebenslauf
+                    value: /lebenslauf/
+                  - label: Projekte
+                    value: /projekte/
+                  - label: Musik/Videos
+                    value: /musik-videos/
+                  - label: Unterricht
+                    value: /unterricht/
+                  - label: Astronaut
+                    value: /astronaut/
+  - name: projects
+    label: Projekte
+    label_singular: Projekt
+    folder: src/content/projects
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}}"
+    sortable_fields:
+      - order
+      - title
+    fields:
+      - name: title
+        label: Titel
+        widget: string
+      - name: order
+        label: Reihenfolge
+        widget: number
+        value_type: int
+        min: 0
+        default: 1
+      - name: published
+        label: Sichtbar
+        widget: boolean
+        default: true
+      - name: image
+        label: Bild
+        widget: image
+        required: false
+        default: ""
+      - name: imageAlt
+        label: Bildbeschreibung (Barrierefreiheit)
+        widget: string
+        required: false
+        default: ""
+      - name: caption
+        label: Bildunterschrift
+        widget: string
+        required: false
+        default: ""
+      - name: copyright
+        label: Copyright / Fotografie
+        widget: string
+        required: false
+        default: ""
+      - name: videos
+        label: Videos & Musik
+        widget: list
+        required: false
+        fields:
+          - name: title
+            label: Titel
+            widget: string
+          - name: url
+            label: Einbettungs-URL
+            widget: string
+      - name: body
+        label: Projekttext
+        widget: markdown
+      - name: links
+        label: Links
+        widget: list
+        required: false
+        summary: "{{fields.label}}"
+        fields:
+          - name: prefix
+            label: Text vor dem Link
+            widget: string
+            required: false
+            default: ""
+          - name: label
+            label: Linktext
+            widget: string
+          - name: url
+            label: Adresse
+            widget: string
+          - name: icon
+            label: Icon
+            widget: select
+            default: auto
+            options:
+              - label: Automatisch anhand der URL
+                value: auto
+              - label: Website
+                value: website
+              - label: E-Mail
+                value: email
+              - label: Instagram
+                value: instagram
+              - label: YouTube
+                value: youtube
+              - label: SoundCloud
+                value: soundcloud
+              - label: Linktree
+                value: linktree
+              - label: Spotify
+                value: spotify
+              - label: Kein Icon
+                value: none
+  - name: pages
+    label: Seiten
+    files:
+      - name: start
+        label: Start
+        file: src/content/pages/start.md
+        fields:
+          - name: title
+            label: Titel
+            widget: string
+          - name: description
+            label: Beschreibung für Suchmaschinen
+            widget: text
+          - name: hero
+            label: Startbild
+            widget: image
+          - name: heroAlt
+            label: Bildbeschreibung
+            widget: string
+          - name: credit
+            label: Bildnachweis
+            widget: string
+          - name: body
+            label: Inhalt
+            widget: markdown
+            required: false
+          - name: videos
+            label: Videos & Musik
+            widget: list
+            required: false
+            fields:
+              - name: title
+                label: Titel
+                widget: string
+              - name: url
+                label: Einbettungs-URL
+                widget: string
+      - name: termine
+        label: Termine
+        file: src/content/pages/termine.md
+        fields:
+          - name: title
+            label: Titel
+            widget: string
+          - name: description
+            label: Beschreibung für Suchmaschinen
+            widget: text
+          - name: body
+            label: Inhalt
+            widget: markdown
+            required: false
+          - name: videos
+            label: Videos & Musik
+            widget: list
+            required: false
+            fields:
+              - name: title
+                label: Titel
+                widget: string
+              - name: url
+                label: Einbettungs-URL
+                widget: string
+      - name: lebenslauf
+        label: Lebenslauf
+        file: src/content/pages/lebenslauf.md
+        fields:
+          - name: title
+            label: Titel
+            widget: string
+          - name: description
+            label: Beschreibung für Suchmaschinen
+            widget: text
+          - name: body
+            label: Inhalt
+            widget: markdown
+            required: false
+          - name: videos
+            label: Videos & Musik
+            widget: list
+            required: false
+            fields:
+              - name: title
+                label: Titel
+                widget: string
+              - name: url
+                label: Einbettungs-URL
+                widget: string
+      - name: projekte
+        label: Projekte
+        file: src/content/pages/projekte.md
+        fields:
+          - name: title
+            label: Titel
+            widget: string
+          - name: description
+            label: Beschreibung für Suchmaschinen
+            widget: text
+          - name: videos
+            label: Videos & Musik
+            widget: list
+            required: false
+            fields:
+              - name: title
+                label: Titel
+                widget: string
+              - name: url
+                label: Einbettungs-URL
+                widget: string
+      - name: musik-videos
+        label: Musik/Videos
+        file: src/content/pages/musik-videos.md
+        fields:
+          - name: title
+            label: Titel
+            widget: string
+          - name: description
+            label: Beschreibung für Suchmaschinen
+            widget: text
+          - name: body
+            label: Inhalt
+            widget: markdown
+            required: false
+          - name: videos
+            label: Videos & Musik
+            widget: list
+            required: false
+            fields:
+              - name: title
+                label: Titel
+                widget: string
+              - name: url
+                label: Einbettungs-URL
+                widget: string
+      - name: unterricht
+        label: Unterricht
+        file: src/content/pages/unterricht.md
+        fields:
+          - name: title
+            label: Titel
+            widget: string
+          - name: description
+            label: Beschreibung für Suchmaschinen
+            widget: text
+          - name: body
+            label: Inhalt
+            widget: markdown
+            required: false
+          - name: inquiry
+            label: Unterrichtsanfrage
+            widget: object
+            fields:
+              - name: title
+                label: Überschrift
+                widget: string
+              - name: text
+                label: Anfragetext
+                widget: text
+              - name: buttonLabel
+                label: Buttontext
+                widget: string
+              - name: subject
+                label: E-Mail-Betreff
+                widget: string
+          - name: videos
+            label: Videos & Musik
+            widget: list
+            required: false
+            fields:
+              - name: title
+                label: Titel
+                widget: string
+              - name: url
+                label: Einbettungs-URL
+                widget: string
+      - name: astronaut
+        label: Astronaut
+        file: src/content/pages/astronaut.md
+        fields:
+          - name: title
+            label: Titel
+            widget: string
+          - name: description
+            label: Beschreibung für Suchmaschinen
+            widget: text
+          - name: body
+            label: Inhalt
+            widget: markdown
+            required: false
+          - name: videos
+            label: Videos & Musik
+            widget: list
+            required: false
+            fields:
+              - name: title
+                label: Titel
+                widget: string
+              - name: url
+                label: Einbettungs-URL
+                widget: string
+  - name: tuition
+    label: Unterrichtspreise
+    files:
+      - name: tuition
+        label: Preise & Unterrichtsmodelle
+        file: src/data/tuition.json
+        fields:
+          - name: title
+            label: Überschrift
+            widget: string
+          - name: groups
+            label: Unterrichtsmodelle
+            widget: list
+            summary: "{{fields.audience}} {{fields.title}}"
+            fields:
+              - name: audience
+                label: Zielgruppe
+                widget: select
+                options:
+                  - "Kinder und Jugendliche:"
+                  - "Erwachsene:"
+              - name: title
+                label: Modell / Kartenart
+                widget: string
+                required: false
+                default: ""
+              - name: note
+                label: Hinweis
+                widget: text
+                required: false
+                default: ""
+              - name: rows
+                label: Preise
+                widget: list
+                fields:
+                  - name: duration
+                    label: Dauer / Anzahl
+                    widget: string
+                  - name: price
+                    label: Preis (mit Einheit)
+                    widget: string
+  - name: events
+    label: Konzerttermine
+    files:
+      - name: events
+        label: Termine verwalten
+        file: src/data/events.json
+        fields:
+          - name: events
+            label: Termine
+            widget: list
+            summary: "{{fields.date}} – {{fields.venue}}"
+            fields:
+              - name: date
+                label: Datum und Uhrzeit (Anzeige)
+                widget: string
+              - name: startDate
+                label: Konzertdatum (für Archiv-Zuordnung)
+                widget: datetime
+                required: false
+                format: YYYY-MM-DD
+                date_format: DD.MM.YYYY
+                time_format: false
+              - name: venue
+                label: Veranstaltungsort
+                widget: string
+              - name: description
+                label: Programm
+                widget: text
+              - name: links
+                label: Weiterführende Links
+                widget: list
+                required: false
+                fields:
+                  - name: label
+                    label: Linktext
+                    widget: string
+                  - name: url
+                    label: Adresse
+                    widget: string
+  - name: settings
+    label: Website & Kontakt
+    files:
+      - name: contact
+        label: Kontaktdaten
+        file: src/data/settings.json
+        fields:
+          - name: title
+            label: Website-Titel
+            widget: string
+          - name: name
+            label: Name
+            widget: string
+          - name: street
+            label: Straße und Hausnummer
+            widget: string
+          - name: city
+            label: Postleitzahl und Ort
+            widget: string
+          - name: email
+            label: E-Mail
+            widget: string
+          - name: socials
+            label: Social Media
+            widget: list
+            fields:
+              - name: label
+                label: Bezeichnung
+                widget: string
+              - name: url
+                label: Profil-URL
+                widget: string
+  - name: legal
+    label: Rechtliche Seiten
+    files:
+      - name: about
+        label: Impressum
+        file: src/content/legal/about.md
+        fields:
+          - name: title
+            label: Titel
+            widget: string
+          - name: body
+            label: Inhalt
+            widget: markdown
+      - name: datenschutz
+        label: Datenschutz
+        file: src/content/legal/datenschutz.md
+        fields:
+          - name: title
+            label: Titel
+            widget: string
+          - name: body
+            label: Inhalt
+            widget: markdown

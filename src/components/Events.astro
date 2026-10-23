@@ -1,0 +1,22 @@
+---
+import data from '../data/events.json';
+import EventList from './EventList.astro';
+const today=new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Berlin'}).format(new Date());
+const events=[...data.events];
+function dateKey(event: typeof events[number]) {
+  if(event.startDate)return event.startDate;
+  // Older entries also contain date ranges such as 4.9.-17.9.2017.
+  const dayMonth=event.date.match(/^(\d{1,2})\.(\d{1,2})\./);
+  const year=event.date.match(/\d{4}/);
+  return dayMonth&&year?`${year[0]}-${dayMonth[2].padStart(2,'0')}-${dayMonth[1].padStart(2,'0')}`:'';
+}
+const upcoming=events.filter(event=>dateKey(event)>=today).sort((a,b)=>dateKey(a).localeCompare(dateKey(b)));
+const archive=events.filter(event=>dateKey(event)<today).sort((a,b)=>dateKey(b).localeCompare(dateKey(a)));
+const recent=archive.slice(0,3);
+const older=archive.slice(3);
+---
+{upcoming.length>0&&<section class="upcoming-events" aria-labelledby="upcoming-title"><h2 id="upcoming-title">Demnächst</h2><EventList events={upcoming}/></section>}
+{recent.length>0&&<section class="recent-events" aria-labelledby="recent-title"><h2 id="recent-title">Vergangene Konzerte</h2><EventList events={recent}/></section>}
+{older.length>0&&<details class="event-archive"><summary>Weitere vergangene Konzerte</summary>
+  <EventList events={older}/>
+</details>}

@@ -1,0 +1,25 @@
+{
+  "title": "Christoph Stöber - Pianist",
+  "name": "Christoph Stöber",
+  "street": "Venloer Straße 601-603",
+  "city": "50827 Köln",
+  "email": "christoph_stoeber@yahoo.de",
+  "socials": [
+    {
+      "label": "Instagram · Astronaut",
+      "url": "https://www.instagram.com/astronaut_onearth/"
+    },
+    {
+      "label": "YouTube · Astronaut",
+      "url": "https://www.youtube.com/@astronautonearth1456"
+    },
+    {
+      "label": "SoundCloud",
+      "url": "https://soundcloud.com/astronaut-musik"
+    },
+    {
+      "label": "Linktree",
+      "url": "https://linktr.ee/astronaut_onearth"
+    }
+  ]
+}

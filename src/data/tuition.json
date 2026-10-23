@@ -1,0 +1,81 @@
+{
+  "title": "Preise",
+  "groups": [
+    {
+      "audience": "Kinder und Jugendliche:",
+      "title": "",
+      "note": "(Preise wöchentlicher Termin bei 36 Terminen pro Jahr)",
+      "rows": [
+        {
+          "duration": "30 Minuten",
+          "price": "82,00€ pro Monat"
+        },
+        {
+          "duration": "45 Minuten",
+          "price": "124,00€ pro Monat"
+        },
+        {
+          "duration": "60 Minuten",
+          "price": "165,00€ pro Monat"
+        }
+      ]
+    },
+    {
+      "audience": "Erwachsene:",
+      "title": "Einzelstunde für Erwachsene",
+      "note": "",
+      "rows": [
+        {
+          "duration": "1x 45min",
+          "price": "49,00€"
+        },
+        {
+          "duration": "1x 60min",
+          "price": "68,00€"
+        }
+      ]
+    },
+    {
+      "audience": "Erwachsene:",
+      "title": "5er-Karte für Erwachsene:",
+      "note": "",
+      "rows": [
+        {
+          "duration": "5x 30 Minuten",
+          "price": "162,00 €"
+        },
+        {
+          "duration": "5x 45 Minuten",
+          "price": "242,00€"
+        },
+        {
+          "duration": "5x 60 Minuten",
+          "price": "323,00€"
+        },
+        {
+          "duration": "5x 90 Minuten",
+          "price": "485,00€"
+        }
+      ]
+    },
+    {
+      "audience": "Erwachsene:",
+      "title": "10er-Karte für Erwachsene:",
+      "note": "",
+      "rows": [
+        {
+          "duration": "10x 45 Minuten",
+          "price": "459,00€"
+        },
+        {
+          "duration": "10x 60 Minuten",
+          "price": "612,00€"
+        },
+        {
+          "duration": "10x 90 Minuten",
+          "price": "918,00€"
+        }
+      ]
+    }
+  ]
+}

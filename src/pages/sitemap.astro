@@ -1,0 +1,6 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {getCollection} from 'astro:content';
+const pages=await getCollection('pages');
+---
+<Layout title="Sitemap"><article class="prose"><h1>Sitemap</h1><ul>{pages.map(page=><li><a href={page.id==='start'?'/':`/${page.id}/`}>{page.data.title}</a></li>)}<li><a href="/about/">Impressum</a></li><li><a href="/datenschutz/">Datenschutz</a></li></ul></article></Layout>

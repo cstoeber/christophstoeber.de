@@ -1,0 +1,8 @@
+---
+import settings from '../data/settings.json';
+import SocialIcon from './SocialIcon.astro';
+interface Props { subject?: string; label?: string; }
+const {subject,label='Kontakt aufnehmen'}=Astro.props;
+const href=`mailto:${settings.email}${subject?`?subject=${encodeURIComponent(subject)}`:''}`;
+---
+<a class="email-cta contact-email" href={href}><SocialIcon url={href}/><span>{label}</span></a>

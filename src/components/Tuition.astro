@@ -1,0 +1,16 @@
+---
+import tuition from '../data/tuition.json';
+const children=tuition.groups.filter(group=>group.audience.startsWith('Kinder'));
+const adults=tuition.groups.filter(group=>!group.audience.startsWith('Kinder'));
+---
+<section class="tuition" aria-labelledby="prices-title">
+  <h2 id="prices-title">{tuition.title}</h2>
+  {[children,adults].filter(groups=>groups.length>0).map(groups=><section class="price-audience">
+    <h3>{groups[0].audience}</h3>
+    <div class="price-grid">{groups.map(group=><section class="price-option">
+      {group.title&&<h4>{group.title}</h4>}
+      <table aria-label={`${group.audience} ${group.title}`}><tbody>{group.rows.map(row=><tr><th scope="row">{row.duration}</th><td>{row.price}</td></tr>)}</tbody></table>
+      {group.note&&<p class="price-note">{group.note}</p>}
+    </section>)}</div>
+  </section>)}
+</section>

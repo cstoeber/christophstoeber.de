@@ -1,0 +1,26 @@
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
+import { glob } from 'astro/loaders';
+const pages = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/pages' }),
+  schema: z.object({
+    title: z.string(), description: z.string(),
+    hero: z.string().optional(), heroAlt: z.string().optional(), credit: z.string().optional(),
+    videos: z.array(z.object({ title: z.string(), url: z.url() })).default([]),
+    inquiry: z.object({title:z.string(),text:z.string(),buttonLabel:z.string(),subject:z.string()}).optional(),
+  }),
+});
+const legal = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/legal' }),
+  schema: z.object({ title: z.string() }),
+});
+const projects = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/projects' }),
+  schema: z.object({
+    title: z.string(), order: z.number().default(0), published: z.boolean().default(true),
+    image: z.string().default(''), imageAlt: z.string().default(''), caption: z.string().default(''), copyright: z.string().default(''),
+    videos: z.array(z.object({title:z.string(),url:z.url()})).default([]),
+    links: z.array(z.object({ prefix: z.string().default(''), label: z.string(), url: z.url(), icon:z.enum(['auto','website','email','instagram','youtube','soundcloud','linktree','spotify','none']).default('auto') })).default([]),
+  }),
+});
+export const collections = { pages, legal, projects };

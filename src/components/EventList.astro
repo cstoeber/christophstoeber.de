@@ -1,0 +1,6 @@
+---
+interface Event {date:string;venue:string;description:string;links?:{label:string;url:string}[];}
+interface Props {events:Event[];}
+const {events}=Astro.props;
+---
+<div class="events">{events.map(event=><div class="event"><div><p>{event.date}</p><p class="event-venue">{event.venue}</p></div><div>{event.description.split('\n\n').map(text=><p>{text}</p>)}{event.links?.map(link=><p><a href={link.url}>{link.label}</a></p>)}</div></div>)}</div>

@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "label": "Unterricht",
+      "href": "/unterricht/"
+    },
+    {
+      "label": "Projekte",
+      "href": "/projekte/"
+    },
+    {
+      "label": "Astronaut",
+      "href": "/astronaut/"
+    },
+    {
+      "label": "Termine",
+      "href": "/termine/"
+    },
+    {
+      "label": "Musik / Videos",
+      "href": "/musik-videos/"
+    },
+    {
+      "label": "Lebenslauf",
+      "href": "/lebenslauf/"
+    }
+  ]
+}

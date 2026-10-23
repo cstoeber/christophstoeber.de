@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import { createMarkdownProcessor } from '@astrojs/markdown-remark';
+import editorialLayout from '../../scripts/rehype-editorial-layout.mjs';
+import Layout from '../layouts/Layout.astro';
+import Media from '../components/Media.astro';
+import Projects from '../components/Projects.astro';
+import Tuition from '../components/Tuition.astro';
+import Events from '../components/Events.astro';
+import settings from '../data/settings.json';
+import EmailCTA from '../components/EmailCTA.astro';
+export async function getStaticPaths() {
+  const pages=[...await getCollection('pages'),...await getCollection('legal')];
+  return pages.map(page=>({params:{slug:page.id==='start'?undefined:page.id},props:{page}}));
+}
+const {page}=Astro.props;
+const processor=await createMarkdownProcessor({rehypePlugins:[editorialLayout]});
+const {code}=await processor.render(page.body || '');
+const description='description' in page.data?page.data.description:undefined;
+const videos='videos' in page.data?page.data.videos:[];
+const inquiry='inquiry' in page.data?page.data.inquiry:undefined;
+---
+<Layout title={page.data.title} description={description}>
+  {page.collection==='pages' && page.id==='start' ? <><h1 class="visually-hidden">{settings.title}</h1><figure class="hero"><img src={page.data.hero} alt={page.data.heroAlt} width="1820" height="1213" fetchpriority="high" /><figcaption>{page.data.credit}</figcaption></figure></> : <article class:list={['prose',page.id]}><h1>{page.id==='musik-videos'?'Videos':page.data.title}</h1><div class="page-copy" set:html={code} />
+    {page.id==='termine' && <Events />}
+    {page.id==='projekte' && <Projects />}
+    {page.id==='unterricht' && <><Tuition />{inquiry&&<section class="lesson-cta" aria-labelledby="lesson-contact"><h2 id="lesson-contact">{inquiry.title}</h2><p>{inquiry.text}</p><EmailCTA subject={inquiry.subject} label={inquiry.buttonLabel}/></section>}</>}
+    {videos.length>0 && <div class:list={['media-list',{'media-grid':page.id==='astronaut'}]}>{videos.map(video=><Media {...video} />)}</div>}
+  </article>}
+</Layout>
