@@ -9,3 +9,8 @@
   for = "/admin/*"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/admin/config.yml"
+  [headers.values]
+    Cache-Control = "no-cache, max-age=0, must-revalidate"

@@ -153,6 +153,9 @@ collections:
   - name: mediaSections
     label: Medienabschnitte
     label_singular: Medienabschnitt
+    description: Hier die Abschnitte der Seite Musik / Videos und ihre einzelnen
+      Videos und Musikeinbettungen bearbeiten. Der allgemeine Reiter „Medien“
+      verwaltet nur hochgeladene Dateien.
     folder: src/content/media
     create: true
     slug: "{{slug}}"
@@ -194,7 +197,13 @@ collections:
       - name: videos
         label: Videos & Musik
         widget: list
+        label_singular: Medium
+        required: false
+        default: []
+        collapsed: false
         summary: "{{fields.title}}"
+        hint: Titel und Einbettungs-URL hier bearbeiten, Einträge hinzufügen oder
+          löschen und per Drag-and-drop sortieren.
         fields:
           - name: title
             label: Titel

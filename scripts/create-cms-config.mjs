@@ -15,11 +15,11 @@ const config={
       field('videos','Videos & Musik','list',{required:false,fields:[field('title','Titel'),field('url','Einbettungs-URL')]}),
       field('body','Projekttext','markdown'),field('links','Links','list',{required:false,summary:'{{fields.label}}',fields:[field('prefix','Text vor dem Link','string',{required:false,default:''}),field('label','Linktext'),field('url','Adresse'),field('icon','Icon','select',{default:'auto',options:[{label:'Automatisch anhand der URL',value:'auto'},{label:'Website',value:'website'},{label:'E-Mail',value:'email'},{label:'Instagram',value:'instagram'},{label:'YouTube',value:'youtube'},{label:'SoundCloud',value:'soundcloud'},{label:'Linktree',value:'linktree'},{label:'Spotify',value:'spotify'},{label:'Kein Icon',value:'none'}]})]})
     ]},
-    {name:'mediaSections',label:'Medienabschnitte',label_singular:'Medienabschnitt',folder:'src/content/media',create:true,slug:'{{slug}}',identifier_field:'title',summary:'{{title}}',sortable_fields:['order','title'],fields:[
+    {name:'mediaSections',label:'Medienabschnitte',label_singular:'Medienabschnitt',description:'Hier die Abschnitte der Seite Musik / Videos und ihre einzelnen Videos und Musikeinbettungen bearbeiten. Der allgemeine Reiter „Medien“ verwaltet nur hochgeladene Dateien.',folder:'src/content/media',create:true,slug:'{{slug}}',identifier_field:'title',summary:'{{title}}',sortable_fields:['order','title'],fields:[
       field('title','Überschrift'),field('order','Reihenfolge','number',{value_type:'int',min:0,default:1}),field('published','Sichtbar','boolean',{default:true}),
       field('project','Projekt (optional)','relation',{required:false,collection:'projects',search_fields:['title'],value_field:'{{slug}}',display_fields:['title'],hint:'Leer lassen für einen freien Abschnitt. Bei Zuordnung wird der Abschnitt automatisch beim Projekt verlinkt, sofern dort aktiviert.'}),
       field('body','Beschreibung','markdown',{required:false}),
-      field('videos','Videos & Musik','list',{summary:'{{fields.title}}',fields:[field('title','Titel'),field('url','Einbettungs-URL')]})
+      field('videos','Videos & Musik','list',{label_singular:'Medium',required:false,default:[],collapsed:false,summary:'{{fields.title}}',hint:'Titel und Einbettungs-URL hier bearbeiten, Einträge hinzufügen oder löschen und per Drag-and-drop sortieren.',fields:[field('title','Titel'),field('url','Einbettungs-URL')]})
     ]},
     {name:'pages',label:'Seiten',files:Object.entries(pages).map(([name,label])=>({name,label,file:`src/content/pages/${name}.md`,fields:[
       field('title','Titel'),field('description','Beschreibung für Suchmaschinen','text'),
