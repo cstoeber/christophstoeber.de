@@ -21,7 +21,7 @@
   --heading-1: 4.208727rem;
 }
 * { box-sizing: border-box; }
-body { margin: 0; }
+body { margin: 0; font-size: 14px; }
 html { scroll-padding-top: 180px; }
 .header { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 1px solid var(--line); }
 a { color: inherit; text-underline-offset: .24em; text-decoration-thickness: 1px; }
