@@ -12,13 +12,13 @@
   --accent: #d6b8b3;
   --accent-hover: #c9a49e;
   --accent-ink: #382b2b;
-  --heading-ratio: 1.333;
-  --heading-6: 1rem;
+  --heading-ratio: 1.25;
+  --heading-6: calc(14rem / 15);
   --heading-5: calc(var(--heading-6) * var(--heading-ratio));
   --heading-4: calc(var(--heading-5) * var(--heading-ratio));
   --heading-3: calc(var(--heading-4) * var(--heading-ratio));
   --heading-2: calc(var(--heading-3) * var(--heading-ratio));
-  --heading-1: calc(var(--heading-2) * var(--heading-ratio));
+  --heading-1: 4.208727rem;
 }
 * { box-sizing: border-box; }
 body { margin: 0; }
