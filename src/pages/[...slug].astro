@@ -24,7 +24,7 @@ const inquiry='inquiry' in page.data?page.data.inquiry:undefined;
   {page.collection==='pages' && page.id==='start' ? <><h1 class="visually-hidden">{settings.title}</h1><figure class="hero"><img src={page.data.hero} alt={page.data.heroAlt} width="1820" height="1213" fetchpriority="high" /><figcaption>{page.data.credit}</figcaption></figure></> : <article class:list={['prose',page.id]}><h1>{page.id==='musik-videos'?'Videos':page.data.title}</h1><div class="page-copy" set:html={code} />
     {page.id==='termine' && <Events />}
     {page.id==='projekte' && <Projects />}
-    {page.id==='unterricht' && <><Tuition />{inquiry&&<section class="lesson-cta" aria-labelledby="lesson-contact"><h2 id="lesson-contact">{inquiry.title}</h2><p>{inquiry.text}</p><EmailCTA subject={inquiry.subject} label={inquiry.buttonLabel}/></section>}</>}
+    {page.id==='unterricht' && <>{inquiry&&<section class="lesson-cta" aria-labelledby="lesson-contact"><h2 id="lesson-contact">{inquiry.title}</h2><p>{inquiry.text}</p><EmailCTA subject={inquiry.subject} label={inquiry.buttonLabel}/></section>}<Tuition /></>}
     {videos.length>0 && <div class:list={['media-list',{'media-grid':page.id==='astronaut'}]}>{videos.map(video=><Media {...video} />)}</div>}
   </article>}
 </Layout>
