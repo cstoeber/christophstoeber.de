@@ -7,7 +7,7 @@ const recent=archive.slice(0,3);
 const older=archive.slice(3);
 ---
 {upcoming.length>0&&<section class="upcoming-events" aria-labelledby="upcoming-title"><h2 id="upcoming-title">Demnächst</h2><EventList events={upcoming}/></section>}
-{recent.length>0&&<section class="recent-events" aria-labelledby="recent-title"><h2 id="recent-title">Vergangene Konzerte</h2><EventList events={recent}/></section>}
+{recent.length>0&&<section class="recent-events" aria-labelledby="recent-title"><h2 id="recent-title">Vergangenes</h2><EventList events={recent}/></section>}
 {older.length>0&&<details class="event-archive"><summary><span class="visually-hidden">Weitere vergangene Konzerte</span></summary>
   <EventList events={older}/>
 </details>}
