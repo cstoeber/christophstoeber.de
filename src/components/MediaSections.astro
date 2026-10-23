@@ -11,10 +11,10 @@ const sections=await Promise.all(entries.map(async section=>({...section,html:(a
   {sections.map(section=><section class="media-section" id={section.id} aria-labelledby={`media-${section.id}`}>
     <h2 id={`media-${section.id}`}>{section.data.title}</h2>
     {section.html&&<div class="project-richtext" set:html={section.html}/>}
+    {section.data.videos.length>0&&<div class="media-list">{section.data.videos.map(video=><Media {...video}/>)}</div>}
     {section.data.images.length>0&&<div class="media-gallery">{section.data.images.map(image=><figure>
       <img src={image.image} alt={image.alt} loading="lazy"/>
       {(image.caption||image.copyright)&&<figcaption>{image.caption&&<span>{image.caption}</span>}{image.copyright&&<span>{image.copyright}</span>}</figcaption>}
     </figure>)}</div>}
-    {section.data.videos.length>0&&<div class="media-list">{section.data.videos.map(video=><Media {...video}/>)}</div>}
   </section>)}
 </div>
