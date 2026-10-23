@@ -8,15 +8,15 @@
       "rows": [
         {
           "duration": "30 Minuten",
-          "price": "82,00€ pro Monat"
+          "price": "82,00 € pro Monat"
         },
         {
           "duration": "45 Minuten",
-          "price": "124,00€ pro Monat"
+          "price": "124,00 € pro Monat"
         },
         {
           "duration": "60 Minuten",
-          "price": "165,00€ pro Monat"
+          "price": "165,00 € pro Monat"
         }
       ]
     },
@@ -27,11 +27,11 @@
       "rows": [
         {
           "duration": "1 × 45min",
-          "price": "49,00€"
+          "price": "49,00 €"
         },
         {
           "duration": "1 × 60min",
-          "price": "68,00€"
+          "price": "68,00 €"
         }
       ]
     },
@@ -42,19 +42,19 @@
       "rows": [
         {
           "duration": "5 × 30 Minuten",
-          "price": "162,00 €"
+          "price": "162,00 €"
         },
         {
           "duration": "5 × 45 Minuten",
-          "price": "242,00€"
+          "price": "242,00 €"
         },
         {
           "duration": "5 × 60 Minuten",
-          "price": "323,00€"
+          "price": "323,00 €"
         },
         {
           "duration": "5 × 90 Minuten",
-          "price": "485,00€"
+          "price": "485,00 €"
         }
       ]
     },
@@ -65,15 +65,15 @@
       "rows": [
         {
           "duration": "10 × 45 Minuten",
-          "price": "459,00€"
+          "price": "459,00 €"
         },
         {
           "duration": "10 × 60 Minuten",
-          "price": "612,00€"
+          "price": "612,00 €"
         },
         {
           "duration": "10 × 90 Minuten",
-          "price": "918,00€"
+          "price": "918,00 €"
         }
       ]
     }
