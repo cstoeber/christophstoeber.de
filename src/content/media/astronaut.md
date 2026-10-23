@@ -3,6 +3,19 @@ title: Astronaut
 order: 1
 published: true
 project: astronaut
+images:
+  - caption: ""
+    copyright: ""
+    image: /images/img-20260812-wa0027.jpg
+    alt: Musiker Astronaut mit Sonnenfinsternisbrille am Klavier
+  - caption: Astronaut plus Sebastian Gokus
+    copyright: ""
+    image: /images/whatsapp-image-2026-10-02-at-5.46.58-pm.jpeg
+    alt: "Musiker Astronaut mit Glockenspielspieler "
+  - caption: ""
+    copyright: Yves Sanwidi
+    image: /images/img-20250410-wa0014.jpg
+    alt: Musiker Astronaut am Klavier mit Handy
 videos:
   - title: Social Media
     url: https://www.youtube-nocookie.com/embed/nM969qQLTA0?wmode=transparent&vq=hd1080
