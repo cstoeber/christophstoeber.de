@@ -21,4 +21,6 @@ videos:
     url: https://open.spotify.com/embed/track/2gfnj4zRBmGkYZqA48qr7m?utm_source=generator
   - url: https://www.youtube-nocookie.com/embed/F1qK8yGCxaQ?si=YlQyxU7PHv-fh7XB&amp;controls=0
     title: Weltuntergang Live
+  - url: https://www.youtube-nocookie.com/embed/ld-QvkWZlp8?wmode=transparent&vq=hd1080
+    title: "Astronaut: Verwandlung"
 ---
