@@ -37,5 +37,3 @@ Von Bach und Beethoven über Klassiker des 20. Jahrhunderts bis zu zeitgenössis
 Unterrichtsort:
 
 Bei euch zu Hause oder bei mir am Flügel in Bickendorf.
-
-![](/images/img-20260812-wa0027.jpg)
