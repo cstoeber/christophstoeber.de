@@ -18,7 +18,9 @@ Wenn Sie per E-Mail Kontakt aufnehmen, werden Ihre Angaben zur Bearbeitung Ihrer
 
 ## Hosting
 
-**Vor Veröffentlichung ergänzen:** Hostinganbieter, Umfang und Rechtsgrundlage der Serverprotokolle, Speicherdauer sowie gegebenenfalls Angaben zur Auftragsverarbeitung. Diese Angaben hängen vom gewählten Hosting ab.
+Diese Website wird über Netlify, Inc. bereitgestellt. Für die Auslieferung der Website verarbeitet Netlify technische Verbindungsdaten, insbesondere die IP-Adresse des aufrufenden Geräts.
+
+Weitere Informationen enthält die [Datenschutzerklärung von Netlify](https://www.netlify.com/privacy/). Informationen zur Verarbeitung im Auftrag von Websitebetreibern stellt Netlify in seiner [Vereinbarung zur Auftragsverarbeitung](https://www.netlify.com/dpa/) bereit.
 
 ## Ihre Rechte
 

@@ -59,7 +59,7 @@ SEO: individuelle Seitentitel und Beschreibungen, Canonical-URLs, XML-Sitemap, O
 
 ## GitHub und Hosting
 
-Die Dateien wurden lokal erstellt. Es wurden keine Commits gepusht und keine bestehende Website ersetzt. Das angegebene Repository lieferte bei der Abfrage keinen HEAD; die Konfiguration verwendet `main`. Bei einem anderen Hauptbranch `backend.branch` in `public/admin/config.yml` anpassen.
+Der Quellcode liegt auf https://github.com/cstoeber/christophstoeber.de im Branch `main`. Das Netlify-Projekt heißt `christophstoeber`, die Netlify-Adresse lautet https://christophstoeber.netlify.app. Lokale Zugangsdaten und die Projektverknüpfung unter `.netlify/` sind vom Repository ausgeschlossen. Die bestehende Domain wird durch ein Deployment auf die Netlify-Adresse nicht umgestellt.
 
 Für ein Hosting auf Netlify ist `netlify.toml` vorbereitet: Build `npm run build`, Ausgabeverzeichnis `dist`, Node.js 24. Repository mit dem Hosting verbinden; jeder CMS-Commit kann dann einen neuen Build auslösen.
 
@@ -71,7 +71,7 @@ Ohne diese externe Einrichtung funktioniert das CMS lokal, die produktive GitHub
 
 ## Vor der Veröffentlichung
 
-Die alte Impressumsseite enthielt nur einen Jimdo-Werbetext. Die neue Seite enthält die übernommenen Kontakt- und Bildangaben. Impressum und Datenschutzhinweise sind Entwürfe; insbesondere die Angaben zum tatsächlichen Hosting müssen ergänzt und die rechtlichen Seiten geprüft werden.
+Die alte Impressumsseite enthielt nur einen Jimdo-Werbetext. Die neue Seite enthält die übernommenen Kontakt- und Bildangaben. Impressum und Datenschutzhinweise sind Entwürfe; Netlify ist als Hostinganbieter eingetragen. Die rechtlichen Seiten müssen weiterhin geprüft werden.
 
 Die Originalfotos und ihre vorhandenen Bildnachweise wurden übernommen. Weitere Bildrechte und Nachweise vor der Veröffentlichung prüfen.
 
