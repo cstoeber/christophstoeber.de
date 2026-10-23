@@ -1,4 +1,4 @@
-// Preserve Markdown order; standalone pictures become centered figures in place.
+// Preserve Markdown order; standalone pictures become figures in place.
 export default function editorialLayout() {
   return tree => {
     const element=(tagName,children,className)=>({type:'element',tagName,properties:className?{className:[className]}:{},children});

@@ -48,6 +48,11 @@ nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: 
 .prose .page-copy img, .prose .project-richtext img { width: auto; height: auto; max-width: min(100%, 640px); max-height: 560px; object-fit: contain; margin: 32px auto; }
 .prose .richtext-image { max-width: 640px; margin: 32px auto; text-align: center; }
 .prose .richtext-image img { margin-block: 0; }
+.page-copy, .project-richtext { display: flow-root; }
+@media (min-width: 960px) {
+  .prose .richtext-image { float: left; clear: left; width: 50%; max-width: none; margin: 0 28px 24px 0; text-align: left; }
+  .prose .richtext-image img { max-width: 100%; margin: 0; }
+}
 .richtext-image figcaption, .project-section figcaption { display: grid; gap: 2px; font: 12px/1.6 'Karla', sans-serif; color: var(--muted); margin-top: 10px; }
 .projects-list { display: grid; gap: 85px; }
 .project-section { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 48px; }
