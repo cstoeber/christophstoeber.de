@@ -24,6 +24,6 @@ videos:
     url: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2177767607%3Fsecret_token%3Ds-Ver2DvuIc9v&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true
 ---
 
-2024 haben mich Mauri und Nathalie vom "Königsmörder Podcast" angefragt die Musik beizusteuern. Das sind die Ergebnisse. In Action könnt ihr sie überall hören wo es Podcasts gibt. Zum Beispiel hier:
+2024 haben mich Mauri und Nathalie vom "Königsmörder Podcast" angefragt, die Musik beizusteuern. Das sind die Ergebnisse. In Action könnt ihr sie überall hören, wo es Podcasts gibt. Zum Beispiel hier:
 
-Fall du, ihr oder Sie ein ähnliches Projekt habt und handcrafted Musik frei von KI dafür produziert haben wollt, meldet euch gerne!
+Falls du ein ähnliches Projekt hast und handcrafted Musik frei von KI dafür produziert haben möchtest, melde dich gerne!

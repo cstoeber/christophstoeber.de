@@ -4,7 +4,7 @@
     {
       "audience": "Kinder und Jugendliche:",
       "title": "",
-      "note": "(Preise wöchentlicher Termin bei 36 Terminen pro Jahr)",
+      "note": "(Preise für einen wöchentlichen Termin bei 36 Terminen pro Jahr)",
       "rows": [
         {
           "duration": "30 Minuten",
@@ -26,11 +26,11 @@
       "note": "",
       "rows": [
         {
-          "duration": "1 × 45min",
+          "duration": "1 × 45 Minuten",
           "price": "49,00 €"
         },
         {
-          "duration": "1 × 60min",
+          "duration": "1 × 60 Minuten",
           "price": "68,00 €"
         }
       ]

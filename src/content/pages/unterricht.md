@@ -16,7 +16,7 @@ Ich biete hochqualifizierten privaten Klavierunterricht in ganz Köln an.
 
 ### Über mich
 
-Ich bin klassisch ausgebildeter Pianist und Klavierpädagoge mit langjähriger Unterrichtserfahrung. 2016 habe ich mein Klavierstudium an der Musikhochschule Köln erfolgreich abgeschlossen. Als Mitglied von Ensembles und Bands hat es mich durch Europa, in die USA und den Nahen Osten geführt.
+Ich bin klassisch ausgebildeter Pianist und Klavierpädagoge mit langjähriger Unterrichtserfahrung. 2016 habe ich mein Klavierstudium an der Musikhochschule Köln erfolgreich abgeschlossen. Meine Tätigkeit als Mitglied von Ensembles und Bands hat mich durch Europa, in die USA und den Nahen Osten geführt.
 
 ### Mein Unterricht
 
@@ -30,7 +30,7 @@ Ich unterrichte **Anfänger genauso wie Fortgeschrittene**. Vom ersten Ton bis z
 * Liedbegleitung
 * Effektive Übetechniken
 
-Im Vordergrund stehen dabei immer die **gemeinsamen Musizieren** und dem persönlichen Ausdruck und der individuelle Fortschritt.
+Im Vordergrund stehen dabei immer das **gemeinsame Musizieren**, der persönliche Ausdruck und der individuelle Fortschritt.
 
 Von Bach und Beethoven über Klassiker des 20. Jahrhunderts bis zu zeitgenössischer Musik von Ludovico Einaudi und Yann Tiersen oder aktueller Popmusik: Ich richte mich nach euch und euren Interessen.
 
