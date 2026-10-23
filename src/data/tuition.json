@@ -26,11 +26,11 @@
       "note": "",
       "rows": [
         {
-          "duration": "1x 45min",
+          "duration": "1 × 45min",
           "price": "49,00€"
         },
         {
-          "duration": "1x 60min",
+          "duration": "1 × 60min",
           "price": "68,00€"
         }
       ]
@@ -41,19 +41,19 @@
       "note": "",
       "rows": [
         {
-          "duration": "5x 30 Minuten",
+          "duration": "5 × 30 Minuten",
           "price": "162,00 €"
         },
         {
-          "duration": "5x 45 Minuten",
+          "duration": "5 × 45 Minuten",
           "price": "242,00€"
         },
         {
-          "duration": "5x 60 Minuten",
+          "duration": "5 × 60 Minuten",
           "price": "323,00€"
         },
         {
-          "duration": "5x 90 Minuten",
+          "duration": "5 × 90 Minuten",
           "price": "485,00€"
         }
       ]
@@ -64,15 +64,15 @@
       "note": "",
       "rows": [
         {
-          "duration": "10x 45 Minuten",
+          "duration": "10 × 45 Minuten",
           "price": "459,00€"
         },
         {
-          "duration": "10x 60 Minuten",
+          "duration": "10 × 60 Minuten",
           "price": "612,00€"
         },
         {
-          "duration": "10x 90 Minuten",
+          "duration": "10 × 90 Minuten",
           "price": "918,00€"
         }
       ]
