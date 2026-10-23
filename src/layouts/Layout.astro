@@ -68,9 +68,9 @@ const structuredData={'@context':'https://schema.org','@graph':[
       <div class="header-inner">
         <a class="site-title" href="/" aria-label={`${settings.title} – Start`}>{titleParts.map((part,index)=><>{index>0&&<img class="title-image" src="/images/astronaut-button.png" alt="" width="32" height="32"/>}{part}</>)}</a>
         <button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navigation"><span></span><span></span><span></span></button>
-        <nav id="navigation" aria-label="Hauptnavigation">
+        <div class="navigation-row"><nav id="navigation" aria-label="Hauptnavigation">
           <ul>{navigation.items.map(({href,label})=><li><a href={href} aria-current={Astro.url.pathname===href?'page':undefined}>{label}</a></li>)}</ul>
-        </nav>
+        </nav><a class="compact-title" href="/" aria-label={`${settings.title} – Start`} inert>{titleParts.map((part,index)=><>{index>0&&<img class="title-image" src="/images/astronaut-button.png" alt="" width="24" height="24"/>}{part}</>)}</a></div>
       </div>
     </header>
     <main id="inhalt" class="content" tabindex="-1"><slot /></main>
@@ -94,6 +94,22 @@ const structuredData={'@context':'https://schema.org','@graph':[
       button?.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');nav?.classList.toggle('is-open',open);});
       document.addEventListener('keydown',event=>{if(event.key==='Escape'){closeMenu();button?.focus();}});
       matchMedia('(min-width:960px)').addEventListener('change',closeMenu);
+      const header=document.querySelector<HTMLElement>('.header');
+      const largeTitle=document.querySelector<HTMLAnchorElement>('.site-title');
+      const compactTitle=document.querySelector<HTMLAnchorElement>('.compact-title');
+      const desktop=matchMedia('(min-width:960px)');
+      let compact=false;
+      let scheduled=false;
+      function updateHeader(){
+        scheduled=false;
+        compact=desktop.matches&&(compact?window.scrollY>24:window.scrollY>120);
+        header?.classList.toggle('is-compact',compact);
+        if(largeTitle)largeTitle.inert=compact;
+        if(compactTitle)compactTitle.inert=!compact;
+      }
+      window.addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(updateHeader);}},{passive:true});
+      desktop.addEventListener('change',updateHeader);
+      updateHeader();
     </script>
   </body>
 </html>
