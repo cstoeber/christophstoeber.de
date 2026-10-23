@@ -8,7 +8,7 @@ caption: ""
 copyright: ""
 links:
   - prefix: ""
-    label: "@astronaut_onearth"
+    label: astronaut_onearth
     url: https://www.instagram.com/astronaut_onearth/
     icon: auto
   - prefix: ""
@@ -16,7 +16,7 @@ links:
     url: https://soundcloud.com/astronaut-musik
     icon: auto
   - prefix: ""
-    label: "@astronautonearth1456"
+    label: astronautonearth1456
     url: https://www.youtube.com/@astronautonearth1456
     icon: auto
   - prefix: ""
