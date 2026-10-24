@@ -1,23 +1,18 @@
 {
   "items": [
     {
-      "label": "Unterricht",
       "href": "/unterricht/"
     },
     {
-      "label": "Projekte",
       "href": "/projekte/"
     },
     {
-      "label": "Termine",
       "href": "/termine/"
     },
     {
-      "label": "Bild und Ton",
       "href": "/musik-videos/"
     },
     {
-      "label": "Über mich",
       "href": "/lebenslauf/"
     }
   ]

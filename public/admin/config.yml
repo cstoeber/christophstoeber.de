@@ -20,15 +20,12 @@ collections:
           - name: items
             label: Menüpunkte
             widget: list
-            summary: "{{fields.label}}"
+            summary: "{{fields.href}}"
             collapsed: true
             min: 1
-            hint: Einträge per Drag-and-drop verschieben. Die Reihenfolge gilt für Desktop
-              und Mobilmenü.
+            hint: Reihenfolge per Drag-and-drop ändern. Der Menüname wird automatisch aus
+              dem Seitentitel übernommen; unter Seiten bearbeiten.
             fields:
-              - name: label
-                label: Beschriftung
-                widget: string
               - name: href
                 label: Zielseite
                 widget: select
@@ -37,11 +34,11 @@ collections:
                     value: /
                   - label: Termine
                     value: /termine/
-                  - label: Lebenslauf
+                  - label: Über mich
                     value: /lebenslauf/
                   - label: Projekte
                     value: /projekte/
-                  - label: Musik/Videos
+                  - label: Bild und Ton
                     value: /musik-videos/
                   - label: Unterricht
                     value: /unterricht/
@@ -260,8 +257,10 @@ collections:
         file: src/content/pages/start.md
         fields:
           - name: title
-            label: Titel
+            label: Seitentitel & Menüname
             widget: string
+            hint: Dieser Titel erscheint als Seitenüberschrift und automatisch im Menü. Die
+              URL bleibt unverändert.
           - name: description
             label: Beschreibung für Suchmaschinen
             widget: text
@@ -298,8 +297,10 @@ collections:
         file: src/content/pages/termine.md
         fields:
           - name: title
-            label: Titel
+            label: Seitentitel & Menüname
             widget: string
+            hint: Dieser Titel erscheint als Seitenüberschrift und automatisch im Menü. Die
+              URL bleibt unverändert.
           - name: description
             label: Beschreibung für Suchmaschinen
             widget: text
@@ -326,12 +327,14 @@ collections:
                 hint: Eigenes lokales Standbild oder Cover. Ohne Angabe wird beim Build
                   automatisch eine lokale Vorschau erstellt.
       - name: lebenslauf
-        label: Lebenslauf
+        label: Über mich
         file: src/content/pages/lebenslauf.md
         fields:
           - name: title
-            label: Titel
+            label: Seitentitel & Menüname
             widget: string
+            hint: Dieser Titel erscheint als Seitenüberschrift und automatisch im Menü. Die
+              URL bleibt unverändert.
           - name: description
             label: Beschreibung für Suchmaschinen
             widget: text
@@ -362,8 +365,10 @@ collections:
         file: src/content/pages/projekte.md
         fields:
           - name: title
-            label: Titel
+            label: Seitentitel & Menüname
             widget: string
+            hint: Dieser Titel erscheint als Seitenüberschrift und automatisch im Menü. Die
+              URL bleibt unverändert.
           - name: description
             label: Beschreibung für Suchmaschinen
             widget: text
@@ -386,12 +391,14 @@ collections:
                 hint: Eigenes lokales Standbild oder Cover. Ohne Angabe wird beim Build
                   automatisch eine lokale Vorschau erstellt.
       - name: musik-videos
-        label: Musik/Videos
+        label: Bild und Ton
         file: src/content/pages/musik-videos.md
         fields:
           - name: title
-            label: Titel
+            label: Seitentitel & Menüname
             widget: string
+            hint: Dieser Titel erscheint als Seitenüberschrift und automatisch im Menü. Die
+              URL bleibt unverändert.
           - name: description
             label: Beschreibung für Suchmaschinen
             widget: text
@@ -404,8 +411,10 @@ collections:
         file: src/content/pages/unterricht.md
         fields:
           - name: title
-            label: Titel
+            label: Seitentitel & Menüname
             widget: string
+            hint: Dieser Titel erscheint als Seitenüberschrift und automatisch im Menü. Die
+              URL bleibt unverändert.
           - name: description
             label: Beschreibung für Suchmaschinen
             widget: text

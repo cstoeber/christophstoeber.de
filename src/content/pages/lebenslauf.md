@@ -1,5 +1,5 @@
 ---
-title: Über mich
+title: "Über mich"
 description: "Christoph Stöber, Pianist und Komponist in Köln: Ausbildung,
   Auszeichnungen und künstlerischer Werdegang mit Schwerpunkt zeitgenössische
   Musik."

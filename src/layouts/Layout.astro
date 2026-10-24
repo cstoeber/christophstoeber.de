@@ -11,7 +11,10 @@ import settings from '../data/settings.json';
 import SocialIcon from '../components/SocialIcon.astro';
 import EmailCTA from '../components/EmailCTA.astro';
 import MediaConsentDialog from '../components/MediaConsentDialog.astro';
-import navigation from '../data/navigation.json';
+import navigationSettings from '../data/navigation.json';
+import {getCollection} from 'astro:content';
+import {resolveNavigation} from '../lib/navigation';
+const navigation={items:resolveNavigation(navigationSettings.items,await getCollection('pages'))};
 interface Props { title: string; description?: string; noindex?: boolean; }
 const {title,description='Christoph Stöber – Pianist, Komponist und Klavierpädagoge in Köln.',noindex=false}=Astro.props;
 const canonical=new URL(Astro.url.pathname,Astro.site);

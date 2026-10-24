@@ -1,13 +1,17 @@
-import {writeFile} from 'node:fs/promises';
+import {readFile,writeFile} from 'node:fs/promises';
 import YAML from 'yaml';
-const pages={start:'Start',termine:'Termine',lebenslauf:'Lebenslauf',projekte:'Projekte','musik-videos':'Musik/Videos',unterricht:'Unterricht'};
+const pageSlugs=['start','termine','lebenslauf','projekte','musik-videos','unterricht'];
+const pages=Object.fromEntries(await Promise.all(pageSlugs.map(async slug=>{
+  const source=await readFile(`src/content/pages/${slug}.md`,'utf8');
+  return [slug,YAML.parse(source.split(/^---\s*$/m)[1]).title];
+})));
 const field=(name,label,widget='string',extra={})=>({name,label,widget,...extra});
 const config={
   backend:{name:'github',repo:'cstoeber/christophstoeber.de',branch:'main'},
   local_backend:true, locale:'de',site_url:'https://www.christophstoeber.de',display_url:'https://www.christophstoeber.de',
   media_folder:'public/images',public_folder:'/images',
   collections:[
-    {name:'navigation',label:'Menü',files:[{name:'navigation',label:'Menüpunkte & Reihenfolge',file:'src/data/navigation.json',fields:[field('items','Menüpunkte','list',{summary:'{{fields.label}}',collapsed:true,min:1,hint:'Einträge per Drag-and-drop verschieben. Die Reihenfolge gilt für Desktop und Mobilmenü.',fields:[field('label','Beschriftung'),field('href','Zielseite','select',{options:Object.entries(pages).map(([slug,label])=>({label,value:slug==='start'?'/':`/${slug}/`}))})]})]}]},
+    {name:'navigation',label:'Menü',files:[{name:'navigation',label:'Menüpunkte & Reihenfolge',file:'src/data/navigation.json',fields:[field('items','Menüpunkte','list',{summary:'{{fields.href}}',collapsed:true,min:1,hint:'Reihenfolge per Drag-and-drop ändern. Der Menüname wird automatisch aus dem Seitentitel übernommen; unter Seiten bearbeiten.',fields:[field('href','Zielseite','select',{options:Object.entries(pages).map(([slug,label])=>({label,value:slug==='start'?'/':`/${slug}/`}))})]})]}]},
     {name:'projects',label:'Projekte',label_singular:'Projekt',folder:'src/content/projects',create:true,slug:'{{slug}}',identifier_field:'title',summary:'{{title}}',sortable_fields:['order','title'],fields:[
       field('title','Titel'),field('order','Reihenfolge','number',{value_type:'int',min:0,default:1}),field('published','Sichtbar','boolean',{default:true}),
       field('showMediaLink','Verknüpfte Medien verlinken','boolean',{default:true,hint:'Zeigt automatisch Links zu den sichtbaren Medienabschnitten dieses Projekts.'}),
@@ -23,7 +27,7 @@ const config={
       field('videos','Videos & Musik','list',{label_singular:'Medium',required:false,default:[],collapsed:false,summary:'{{fields.title}}',hint:'Titel und Einbettungs-URL hier bearbeiten, Einträge hinzufügen oder löschen und per Drag-and-drop sortieren.',fields:[field('title','Titel'),field('url','Einbettungs-URL'),field('poster','Vorschaubild (optional)','image',{required:false,default:'',hint:'Eigenes lokales Standbild oder Cover. Ohne Angabe wird beim Build automatisch eine lokale Vorschau erstellt.'})]})
     ]},
     {name:'pages',label:'Seiten',files:Object.entries(pages).map(([name,label])=>({name,label,file:`src/content/pages/${name}.md`,fields:[
-      field('title','Titel'),field('description','Beschreibung für Suchmaschinen','text'),
+      field('title','Seitentitel & Menüname','string',{hint:'Dieser Titel erscheint als Seitenüberschrift und automatisch im Menü. Die URL bleibt unverändert.'}),field('description','Beschreibung für Suchmaschinen','text'),
       ...(name==='start'?[field('hero','Startbild','image'),field('heroAlt','Bildbeschreibung')]:[]),
       ...(name==='projekte'?[]:[field('body','Inhalt','markdown',{required:false})]),
       ...(name==='unterricht'?[field('inquiry','Unterrichtsanfrage','object',{fields:[field('title','Überschrift'),field('text','Anfragetext','text'),field('buttonLabel','Buttontext'),field('subject','E-Mail-Betreff')]})]:[]),

@@ -36,9 +36,11 @@ Der Build prüft die Astro-Dateien und erzeugt eine statische Website in `dist/`
 
 Projektlinks haben im CMS ein Icon-Feld: automatisch aus der URL, Website, E-Mail, Instagram, YouTube, SoundCloud, Linktree, Spotify oder kein Icon. URL, Linktext und optionaler Präfix sind pro Link bearbeitbar. Unterricht und Footer verwenden denselben Kontaktbutton mit Briefumschlag und „Kontakt aufnehmen“; der Unterrichtsbutton ergänzt den E-Mail-Betreff.
 
+Seitentitel und Menübeschriftung haben dieselbe Quelle: Im CMS unter „Seiten“ das Feld „Seitentitel & Menüname“ bearbeiten. Die Navigation speichert ausschließlich Zielseiten und Reihenfolge, keine eigenen Beschriftungen. Ein Umbenennen ändert weder URL noch Medien- oder Projektverknüpfungen. Die Seitennamen in der CMS-Konfiguration werden bei jedem Build aus den Seitentiteln erzeugt.
+
 Unter „Seiten → Unterricht → Unterrichtsanfrage“ sind Überschrift, Anfragetext, Buttontext und E-Mail-Betreff bearbeitbar. Die Empfängeradresse kommt weiterhin aus „Website & Kontakt“.
 
-Unter „Menü → Menüpunkte & Reihenfolge“ lassen sich die Navigationseinträge per Drag-and-drop verschieben. Beschriftung und Zielseite sind dort ebenfalls bearbeitbar. `src/data/navigation.json` bestimmt die Reihenfolge für Desktop und Mobilmenü; Änderungen erscheinen lokal sofort und produktiv nach dem nächsten Build.
+Unter „Menü → Menüpunkte & Reihenfolge“ lassen sich die Navigationseinträge per Drag-and-drop verschieben und ihre Zielseiten auswählen. Die Beschriftung wird automatisch aus dem jeweiligen Seitentitel übernommen. `src/data/navigation.json` bestimmt die Reihenfolge für Desktop und Mobilmenü; Änderungen erscheinen lokal sofort und produktiv nach dem nächsten Build.
 - `src/data/tuition.json`: Unterrichtsmodelle und unverändert übernommene Preise; separat im CMS unter „Unterrichtspreise“ pflegbar.
 - `src/data/events.json`: Konzerttermine mit Datum, Ort und Programm.
 - `src/data/settings.json`: Website-Titel und Kontaktdaten.

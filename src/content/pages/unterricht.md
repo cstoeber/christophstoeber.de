@@ -1,5 +1,5 @@
 ---
-title: Unterricht
+title: "Unterricht"
 description: "Privater Klavierunterricht in Köln mit Christoph Stöber: für
   Anfänger und Fortgeschrittene, vor Ort oder online. Unterrichtsmodelle, Preise
   und Kontakt."
