@@ -12,7 +12,7 @@
   --accent: #d6b8b3;
   --accent-hover: #c9a49e;
   --accent-ink: #382b2b;
-  --heading-ratio: 1.25;
+  --heading-ratio: 1.125;
   --heading-6: calc(14rem / 15);
   --heading-5: calc(var(--heading-6) * var(--heading-ratio));
   --heading-4: calc(var(--heading-5) * var(--heading-ratio));
@@ -31,7 +31,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 button { font: inherit; }
 img { max-width: 100%; height: auto; }
 figure { margin: 0; }
-h1, h2, h3, h4 { font-family: 'Karla', Arial, sans-serif; color: #282828; font-weight: 400; line-height: 1.2; }
+h1, h2, h3, h4 { font-family: 'Karla', Arial, sans-serif; color: #282828; font-weight: 500; line-height: 1.2; }
 h1 { font-size: var(--heading-1); font-weight: 200; letter-spacing: -.035em; margin: 0 0 32px; }
 h2 { font-size: var(--heading-2); letter-spacing: -.02em; margin: 40px 0 22px; }
 h3 { font-size: var(--heading-3); margin: 28px 0 20px; }
@@ -79,7 +79,7 @@ nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: 
 .prose p { margin: 0 0 24px; }
 .prose :is(strong, b) { font-weight: 700; }
 .prose :is(em, i) { font-style: italic; }
-:is(.page-copy, .project-richtext) :is(h5, h6) { font-family: 'Karla', Arial, sans-serif; font-weight: 400; line-height: 1.3; margin: 28px 0 16px; }
+:is(.page-copy, .project-richtext) :is(h5, h6) { font-family: 'Karla', Arial, sans-serif; font-weight: 500; line-height: 1.3; margin: 28px 0 16px; }
 h5 { font-size: var(--heading-5); }
 h6 { font-size: var(--heading-6); }
 :is(.page-copy, .project-richtext) :is(ul, ol) { margin: 0 0 24px; padding-inline-start: 1.6em; }
