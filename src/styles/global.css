@@ -136,8 +136,7 @@ h6 { font-size: var(--heading-6); }
   .media-gallery { grid-template-columns: minmax(0, 1fr); }
 }
 .media { background: #f7f7f7; overflow: hidden; aspect-ratio: 16 / 9; }
-.media.spotify { aspect-ratio: 1; height: auto; }
-.media.soundcloud { aspect-ratio: auto; height: 450px; }
+.media.spotify, .media.soundcloud { aspect-ratio: 1; height: auto; }
 .media iframe { width: 100%; height: 100%; border: 0; display: block; }
 .media-preview { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; width: 100%; height: 100%; border: 1px solid var(--line); padding: 24px; background: #f4f1f0; color: var(--accent-ink); font: 18px/1.5 'Karla', sans-serif; text-align: center; cursor: pointer; }
 .media-preview img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
