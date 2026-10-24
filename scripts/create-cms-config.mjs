@@ -24,7 +24,7 @@ const config={
     ]},
     {name:'pages',label:'Seiten',files:Object.entries(pages).map(([name,label])=>({name,label,file:`src/content/pages/${name}.md`,fields:[
       field('title','Titel'),field('description','Beschreibung für Suchmaschinen','text'),
-      ...(name==='start'?[field('hero','Startbild','image'),field('heroAlt','Bildbeschreibung'),field('credit','Bildnachweis')]:[]),
+      ...(name==='start'?[field('hero','Startbild','image'),field('heroAlt','Bildbeschreibung')]:[]),
       ...(name==='projekte'?[]:[field('body','Inhalt','markdown',{required:false})]),
       ...(name==='unterricht'?[field('inquiry','Unterrichtsanfrage','object',{fields:[field('title','Überschrift'),field('text','Anfragetext','text'),field('buttonLabel','Buttontext'),field('subject','E-Mail-Betreff')]})]:[]),
       ...(name==='musik-videos'?[]:[field('videos','Videos & Musik','list',{required:false,fields:[field('title','Titel'),field('url','Einbettungs-URL'),field('poster','Vorschaubild (optional)','image',{required:false,default:'',hint:'Eigenes lokales Standbild oder Cover. Ohne Angabe wird beim Build automatisch eine lokale Vorschau erstellt.'})]})])

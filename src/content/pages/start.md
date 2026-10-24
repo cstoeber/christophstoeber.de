@@ -4,7 +4,6 @@ description: "Christoph Stöber: Pianist, Komponist und Klavierpädagoge in Köl
 videos: []
 hero: "/images/start-1.jpg"
 heroAlt: "Christoph Stöber am See im Park"
-credit: "© Malte Hömberg"
 ---
 
 

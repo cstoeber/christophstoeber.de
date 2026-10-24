@@ -271,9 +271,6 @@ collections:
           - name: heroAlt
             label: Bildbeschreibung
             widget: string
-          - name: credit
-            label: Bildnachweis
-            widget: string
           - name: body
             label: Inhalt
             widget: markdown

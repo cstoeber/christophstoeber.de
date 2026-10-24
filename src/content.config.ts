@@ -5,7 +5,7 @@ const pages = defineCollection({
   loader: glob({ pattern: '*.md', base: './src/content/pages' }),
   schema: z.object({
     title: z.string(), description: z.string(),
-    hero: z.string().optional(), heroAlt: z.string().optional(), credit: z.string().optional(),
+    hero: z.string().optional(), heroAlt: z.string().optional(),
     videos: z.array(z.object({ title: z.string(), url: z.url(), poster: z.string().nullish() })).default([]),
     inquiry: z.object({title:z.string(),text:z.string(),buttonLabel:z.string(),subject:z.string()}).optional(),
   }),
