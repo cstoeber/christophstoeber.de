@@ -10,7 +10,7 @@ Deutschland
 
 ## Tätigkeit
 
-Pianist, Songwriter und Klavierpädagoge. Klavierunterricht, Konzerte und Musikproduktion.
+Pianist, Songwriter und Klavierpädagoge
 
 ## Kontakt
 
