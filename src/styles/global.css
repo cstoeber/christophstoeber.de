@@ -97,9 +97,6 @@ h6 { font-size: var(--heading-6); }
   .prose .richtext-image img { max-width: 100%; margin: 0; }
 }
 .richtext-image figcaption, .project-section figcaption { display: grid; gap: 2px; font: 12px/1.6 'Karla', sans-serif; color: var(--muted); margin-top: 10px; }
-@media (max-width: 959px) {
-  .lebenslauf .richtext-image figcaption { text-align: left; }
-}
 .projects-list { display: grid; gap: 85px; }
 .project-section { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 48px; }
 .project-section figure img { width: 100%; }
@@ -180,9 +177,6 @@ h6 { font-size: var(--heading-6); }
 .contact-email-area { text-align: center; padding-bottom: 56px; }
 .contact-email span { min-width: 0; overflow-wrap: anywhere; }
 .social-icon { flex: 0 0 18px; }
-.icon-filters { position: absolute; pointer-events: none; }
-.social-icon-handdrawn { display: block; flex-basis: 18px; width: 18px; height: 18px; object-fit: contain; mix-blend-mode: multiply; filter: url(#handdrawn-thin); }
-a:not(.email-cta):hover .social-icon-handdrawn { opacity: .55; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 12px 26px; }
 .project-text-only { grid-template-columns: 1fr; border-top: 1px solid var(--line); padding-top: 48px; }
 .project-text-only .project-copy { max-width: 780px; }
