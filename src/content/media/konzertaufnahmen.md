@@ -11,5 +11,5 @@ videos:
   - title: "Niklas Seidl: bottichkulturen"
     url: https://www.youtube-nocookie.com/embed/MiRvcarj1eM?wmode=transparent&vq=hd1080
   - url: https://www.youtube-nocookie.com/embed/q3oN_0eLdx0?si=ayXBucUWQ72HR0Y7&amp;controls=0
-    title: "Enno Poppe: trauben"
+    title: "Enno Poppe: Trauben"
 ---
