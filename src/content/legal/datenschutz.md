@@ -10,7 +10,7 @@ Bei Fragen zum Datenschutz wenden Sie sich an Christoph Stöber, Venloer Straße
 
 Die Website verwendet keine eigenen Analysewerkzeuge. Schriftarten, Bilder und Medienvorschaubilder werden von der Website selbst ausgeliefert. Die Vorschaubilder stellen keine Verbindung zu YouTube, Spotify oder SoundCloud her.
 
-Externe Player werden erst nach Ihrer Zustimmung zum jeweiligen Anbieter geladen. Mit dem entsprechend beschrifteten Ladebutton geben Sie den Anbieter für die laufende Sitzung frei. Weitere Player desselben Anbieters werden dann ohne erneute Nachfrage geladen. Ohne Zustimmung können Sie die übrige Website weiter nutzen.
+Externe Player werden erst nach Ihrer Zustimmung zum jeweiligen Anbieter geladen. Ein Klick auf die Vorschau öffnet zunächst einen Informationsdialog. Erst mit „Zustimmen & laden“ geben Sie den Anbieter für die laufende Sitzung frei. Weitere Player desselben Anbieters werden dann ohne erneute Nachfrage geladen. Ohne Zustimmung können Sie die übrige Website weiter nutzen.
 
 Nach der Freigabe erhält der Anbieter insbesondere Ihre IP-Adresse sowie technische Browser- und Verbindungsdaten. Er kann Cookies oder ähnliche Technologien zur Bereitstellung des Players, zur Analyse und für eigene Zwecke verwenden. Bei der Nutzung dieser Dienste können Daten auch außerhalb der EU beziehungsweise des EWR, insbesondere in den USA, verarbeitet werden. Einzelheiten zu Empfängern, Speicherdauer und internationalen Datenübermittlungen finden Sie in den nachfolgend verlinkten Datenschutzhinweisen der Anbieter.
 

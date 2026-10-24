@@ -9,13 +9,12 @@ const thumbnail=(poster?.startsWith('/')&&!poster.startsWith('//')?poster:undefi
 ---
 <div class="media-entry" data-provider={type} data-url={url} data-title={title}>
   <div class:list={['media',type]}>
-    <button class="media-preview has-thumbnail" type="button" aria-label={`${title} – ${provider} laden`}>
+    <button class="media-preview has-thumbnail" type="button" aria-haspopup="dialog" aria-label={`${title} – ${provider} laden`}>
       <img src={thumbnail} alt="" loading="lazy"/>
       <span class="media-play" aria-hidden="true">▶</span>
       <span class="media-caption"><span>{title}</span><span class="media-load-label">{provider} laden</span></span>
     </button>
   </div>
-  <p class="media-consent">Mit „{provider} laden“ willigst du ein, dass {provider} Daten (z. B. deine IP-Adresse) erhält und Cookies oder ähnliche Technologien verwendet. Gilt für {provider} in dieser Sitzung; jederzeit unten widerrufbar. <a href="/datenschutz/">Datenschutz</a></p>
   {type==='spotify'&&<p class="media-direct"><a href={url.replace('/embed/','/')} target="_blank" rel="noopener noreferrer">Direkt auf Spotify hören ↗</a></p>}
   <noscript><a href={url}>{title} bei {provider} öffnen</a></noscript>
 </div>

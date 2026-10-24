@@ -10,6 +10,7 @@ import '../styles/global.css';
 import settings from '../data/settings.json';
 import SocialIcon from '../components/SocialIcon.astro';
 import EmailCTA from '../components/EmailCTA.astro';
+import MediaConsentDialog from '../components/MediaConsentDialog.astro';
 import navigation from '../data/navigation.json';
 interface Props { title: string; description?: string; noindex?: boolean; }
 const {title,description='Christoph Stöber – Pianist, Komponist und Klavierpädagoge in Köln.',noindex=false}=Astro.props;
@@ -87,6 +88,7 @@ const structuredData={'@context':'https://schema.org','@graph':[
     </aside>
     <div class="contact-email-area container"><EmailCTA/></div>
     <footer><div class="container footer-inner"><ul class="footer-links" aria-label="Rechtliches und Seitenübersicht"><li><a href="/about/">Impressum</a></li><li><a href="/datenschutz/">Datenschutz</a></li><li><a href="/sitemap/">Sitemap</a></li><li><button class="media-reset" type="button">Medienfreigaben zurücksetzen</button></li></ul><span class="media-reset-status visually-hidden" role="status"></span></div></footer>
+    <MediaConsentDialog/>
     <script>
       import '../scripts/media-consent';
       const button=document.querySelector<HTMLButtonElement>('.menu-toggle');
