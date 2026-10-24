@@ -32,7 +32,7 @@ Ich unterrichte **Anfänger genauso wie Fortgeschrittene**. Vom ersten Ton bis z
 
 Im Vordergrund stehen dabei immer das **gemeinsame Musizieren**, der persönliche Ausdruck und der individuelle Fortschritt.
 
-Von Bach und Beethoven über Klassiker des 20. Jahrhunderts bis zu zeitgenössischer Musik von Ludovico Einaudi und Yann Tiersen oder aktueller Popmusik: Ich richte mich nach dir un deinen Interessen.
+Von Bach und Beethoven über Klassiker des 20. Jahrhunderts bis zu zeitgenössischer Musik von Ludovico Einaudi und Yann Tiersen oder aktueller Popmusik: Ich richte mich nach dir und deinen Interessen.
 
 ### Unterrichtsort
 
