@@ -69,7 +69,7 @@ const structuredData={'@context':'https://schema.org','@graph':[
   </head>
   <body>
     <a class="skip-link" href="#inhalt">Zum Inhalt</a>
-    <header class="header">
+    <header class:list={['header',{'header-home':Astro.url.pathname==='/'}]}>
       <div class="header-inner">
         <a class="site-title" href="/" aria-label={`${settings.title} – Start`}>{titleParts.map((part,index)=><>{index>0&&<ResponsiveImage class="title-image" sizes="40px" src="/images/astronaut-button.png" alt="" width="32" height="32"/>}{part}</>)}</a>
         <button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navigation"><span></span><span></span><span></span></button>
@@ -81,7 +81,7 @@ const structuredData={'@context':'https://schema.org','@graph':[
     <main id="inhalt" class="content" tabindex="-1"><slot /></main>
     <aside class="contact" aria-labelledby="contact-title">
       <div class="container">
-        <h2 id="contact-title">Kontakt</h2>
+        <h2 id="contact-title" class="visually-hidden">Kontakt</h2>
         <div class="contact-details">
           <address>{settings.name}<br />{settings.street}<br />{settings.city}</address>
           <ul class="social-links" aria-label="Social Media">
@@ -119,8 +119,8 @@ const structuredData={'@context':'https://schema.org','@graph':[
       updateHeader();
       if(header&&document.querySelector('.hero')){
         const updateHeroHeight=()=>{
-          if(!desktop.matches&&button?.getAttribute('aria-expanded')!=='true'){
-            document.documentElement.style.setProperty('--mobile-header-height',`${header.getBoundingClientRect().height}px`);
+          if(!header.classList.contains('is-compact')&&button?.getAttribute('aria-expanded')!=='true'){
+            document.documentElement.style.setProperty('--hero-header-height',`${header.getBoundingClientRect().height}px`);
           }
         };
         new ResizeObserver(updateHeroHeight).observe(header);

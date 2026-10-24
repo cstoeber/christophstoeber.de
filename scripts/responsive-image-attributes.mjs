@@ -4,9 +4,9 @@ const manifestPath=path.resolve('.generated/responsive-images.json');
 const images=existsSync(manifestPath)?JSON.parse(readFileSync(manifestPath,'utf8')):{};
 
 export const imageSizes={
-  project:'(max-width: 650px) calc(100vw - 44px), (max-width: 959px) calc((100vw - 92px) / 2), (max-width: 1120px) calc((100vw - 112px) / 2), 504px',
-  gallery:'(max-width: 650px) calc(100vw - 44px), (max-width: 959px) calc((100vw - 88px) / 2), (max-width: 1120px) calc((100vw - 112px) / 3), 336px',
-  preview:'(max-width: 767px) calc(100vw - 44px), (max-width: 1120px) calc((100vw - 94px) / 2), 513px',
+  project:'(max-width: 650px) calc(100vw - 44px), (max-width: 959px) calc((100vw - 92px) / 2), (max-width: 1120px) calc((100vw - 112px) / 2), (max-width: 1439px) 504px, calc((55vw - 112px) / 2)',
+  gallery:'(max-width: 650px) calc(100vw - 44px), (max-width: 959px) calc((100vw - 88px) / 2), (max-width: 1120px) calc((100vw - 112px) / 3), (max-width: 1439px) 336px, calc((55vw - 112px) / 3)',
+  preview:'(max-width: 650px) calc(100vw - 44px), (max-width: 767px) calc(100vw - 64px), (max-width: 959px) calc((100vw - 94px) / 2), (max-width: 1120px) calc((100vw - 94px) / 2), (max-width: 1439px) 513px, calc((55vw - 94px) / 2)',
   richtext:'(max-width: 650px) calc(100vw - 44px), (max-width: 959px) 640px, 390px',
 };
 export function responsiveImageAttributes(src,sizes,sourceImages=images){
@@ -20,5 +20,5 @@ export function responsiveImageAttributes(src,sizes,sourceImages=images){
 export function heroImageSizes(src){
   const image=images[decodeURIComponent(src)];
   const ratio=image?image.width/image.height:1.5;
-  return `(max-width: 959px) max(100vw, calc((100svh - 80px) * ${ratio.toFixed(4)})), (max-width: 1120px) calc(100vw - 64px), 1056px`;
+  return `(max-width: 959px) max(60vw, calc(60svh * ${ratio.toFixed(4)})), (max-width: 1120px) calc((100vw - 64px) * .7), (max-width: 1439px) 739.2px, calc((55vw - 64px) * .7)`;
 }
