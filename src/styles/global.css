@@ -146,6 +146,16 @@ h6 { font-size: var(--heading-6); }
 .has-thumbnail .media-caption { position: absolute; inset: auto 0 0; z-index: 1; padding: 28px 14px 12px; background: linear-gradient(transparent,rgba(0,0,0,.75)); color: #fff; text-align: left; font-size: 14px; }
 .media-provider { font-size: 12px; color: var(--muted); }
 .media-preview:focus-visible { outline-offset: -5px; }
+.media-entry { min-width: 0; }
+.media-caption { display: grid; gap: 4px; }
+.media-load-label { font-size: 12px; opacity: .85; }
+.media-consent { font: 12px/1.65 'Karla', sans-serif; color: var(--muted); }
+.prose .media-consent { margin: 10px 0 0; }
+.prose .media-direct { margin: 8px 0 0; font: 12px/1.65 'Karla', sans-serif; color: var(--muted); }
+.is-authorized .media-consent { display: none; }
+.media.spotify .media-preview img { object-fit: contain; background: #f4f1f0; }
+.media-reset { padding: 0; border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.media-reset:hover { text-decoration: underline; }
 .contact { border-top: 1px solid var(--line); font-family: 'Karla', Arial, sans-serif; }
 .contact .container { display: grid; grid-template-columns: 1fr 2fr; padding-block: 45px; }
 .contact h2 { font-size: var(--heading-5); margin: 0; }

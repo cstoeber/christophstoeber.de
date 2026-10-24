@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build",
+    "build": "node scripts/sync-media-previews.mjs && astro check && astro build",
     "test": "node --experimental-strip-types --test tests/*.test.mjs",
     "preview": "astro preview",
     "cms": "decap-server",

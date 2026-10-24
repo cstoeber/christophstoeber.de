@@ -86,8 +86,9 @@ const structuredData={'@context':'https://schema.org','@graph':[
       </div>
     </aside>
     <div class="contact-email-area container"><EmailCTA/></div>
-    <footer><div class="container footer-inner"><ul class="footer-links" aria-label="Rechtliches und Seitenübersicht"><li><a href="/about/">Impressum</a></li><li><a href="/datenschutz/">Datenschutz</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div></footer>
+    <footer><div class="container footer-inner"><ul class="footer-links" aria-label="Rechtliches und Seitenübersicht"><li><a href="/about/">Impressum</a></li><li><a href="/datenschutz/">Datenschutz</a></li><li><a href="/sitemap/">Sitemap</a></li><li><button class="media-reset" type="button">Medienfreigaben zurücksetzen</button></li></ul><span class="media-reset-status visually-hidden" role="status"></span></div></footer>
     <script>
+      import '../scripts/media-consent';
       const button=document.querySelector<HTMLButtonElement>('.menu-toggle');
       const nav=document.querySelector('#navigation');
       function closeMenu(){button?.setAttribute('aria-expanded','false');button?.setAttribute('aria-label','Menü öffnen');nav?.classList.remove('is-open');}

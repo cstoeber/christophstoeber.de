@@ -107,6 +107,13 @@ collections:
           - name: url
             label: Einbettungs-URL
             widget: string
+          - name: poster
+            label: Vorschaubild (optional)
+            widget: image
+            required: false
+            default: ""
+            hint: Eigenes lokales Standbild oder Cover. Ohne Angabe wird beim Build
+              automatisch eine lokale Vorschau erstellt.
       - name: body
         label: Projekttext
         widget: markdown
@@ -238,6 +245,13 @@ collections:
           - name: url
             label: Einbettungs-URL
             widget: string
+          - name: poster
+            label: Vorschaubild (optional)
+            widget: image
+            required: false
+            default: ""
+            hint: Eigenes lokales Standbild oder Cover. Ohne Angabe wird beim Build
+              automatisch eine lokale Vorschau erstellt.
   - name: pages
     label: Seiten
     files:
@@ -275,6 +289,13 @@ collections:
               - name: url
                 label: Einbettungs-URL
                 widget: string
+              - name: poster
+                label: Vorschaubild (optional)
+                widget: image
+                required: false
+                default: ""
+                hint: Eigenes lokales Standbild oder Cover. Ohne Angabe wird beim Build
+                  automatisch eine lokale Vorschau erstellt.
       - name: termine
         label: Termine
         file: src/content/pages/termine.md
@@ -300,6 +321,13 @@ collections:
               - name: url
                 label: Einbettungs-URL
                 widget: string
+              - name: poster
+                label: Vorschaubild (optional)
+                widget: image
+                required: false
+                default: ""
+                hint: Eigenes lokales Standbild oder Cover. Ohne Angabe wird beim Build
+                  automatisch eine lokale Vorschau erstellt.
       - name: lebenslauf
         label: Lebenslauf
         file: src/content/pages/lebenslauf.md
@@ -325,6 +353,13 @@ collections:
               - name: url
                 label: Einbettungs-URL
                 widget: string
+              - name: poster
+                label: Vorschaubild (optional)
+                widget: image
+                required: false
+                default: ""
+                hint: Eigenes lokales Standbild oder Cover. Ohne Angabe wird beim Build
+                  automatisch eine lokale Vorschau erstellt.
       - name: projekte
         label: Projekte
         file: src/content/pages/projekte.md
@@ -346,6 +381,13 @@ collections:
               - name: url
                 label: Einbettungs-URL
                 widget: string
+              - name: poster
+                label: Vorschaubild (optional)
+                widget: image
+                required: false
+                default: ""
+                hint: Eigenes lokales Standbild oder Cover. Ohne Angabe wird beim Build
+                  automatisch eine lokale Vorschau erstellt.
       - name: musik-videos
         label: Musik/Videos
         file: src/content/pages/musik-videos.md
@@ -401,6 +443,13 @@ collections:
               - name: url
                 label: Einbettungs-URL
                 widget: string
+              - name: poster
+                label: Vorschaubild (optional)
+                widget: image
+                required: false
+                default: ""
+                hint: Eigenes lokales Standbild oder Cover. Ohne Angabe wird beim Build
+                  automatisch eine lokale Vorschau erstellt.
   - name: tuition
     label: Unterrichtspreise
     files:

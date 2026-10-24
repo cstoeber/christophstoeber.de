@@ -1,33 +1,21 @@
+﻿---
+import previews from '../data/media-previews.json';
+interface Props {title:string;url:string;poster?:string|null;}
+const {title,url,poster}=Astro.props;
+const host=new URL(url).hostname;
+const type=host.includes('youtube')||host==='youtu.be'?'video':host==='open.spotify.com'?'spotify':'soundcloud';
+const provider=type==='video'?'YouTube':type==='spotify'?'Spotify':'SoundCloud';
+const thumbnail=(poster?.startsWith('/')&&!poster.startsWith('//')?poster:undefined)||(previews as Record<string,string>)[url]||'/images/astronaut-button.png';
 ---
-interface Props {title:string;url:string;}
-const {title,url}=Astro.props;
-const type=url.includes('youtube')?'video':url.includes('spotify')?'spotify':'soundcloud';
-const videoId=type==='video'?new URL(url).pathname.split('/').pop():undefined;
-const thumbnail=videoId?`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`:undefined;
----
-<div class:list={['media',type]}>
-  {type==='spotify'?<iframe src={url} title={title} allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"/>:<button class:list={['media-preview',{'has-thumbnail':!!thumbnail}]} type="button" data-url={url} data-title={title} data-provider={type} aria-label={`${title} – Wiedergabe aktivieren`}>
-    {thumbnail&&<img src={thumbnail} alt="" loading="lazy" referrerpolicy="no-referrer"/>}
-    <span class="media-play" aria-hidden="true">▶</span>
-    <span class="media-caption">{title}</span>
-    {!thumbnail&&<span class="media-provider">SoundCloud</span>}
-  </button>}
-  <noscript><a href={url}>{title} öffnen</a></noscript>
+<div class="media-entry" data-provider={type} data-url={url} data-title={title}>
+  <div class:list={['media',type]}>
+    <button class="media-preview has-thumbnail" type="button" aria-label={`${title} – ${provider} laden`}>
+      <img src={thumbnail} alt="" loading="lazy"/>
+      <span class="media-play" aria-hidden="true">▶</span>
+      <span class="media-caption"><span>{title}</span><span class="media-load-label">{provider} laden</span></span>
+    </button>
+  </div>
+  <p class="media-consent">Mit „{provider} laden“ willigst du ein, dass {provider} Daten (z. B. deine IP-Adresse) erhält und Cookies oder ähnliche Technologien verwendet. Gilt für {provider} in dieser Sitzung; jederzeit unten widerrufbar. <a href="/datenschutz/">Datenschutz</a></p>
+  {type==='spotify'&&<p class="media-direct"><a href={url.replace('/embed/','/')} target="_blank" rel="noopener noreferrer">Direkt auf Spotify hören ↗</a></p>}
+  <noscript><a href={url}>{title} bei {provider} öffnen</a></noscript>
 </div>
-<script>
-  document.querySelectorAll<HTMLButtonElement>('.media-preview').forEach(button=>{
-    button.addEventListener('click',()=>{
-      const url=new URL(button.dataset.url!);
-      if(button.dataset.provider==='video')url.searchParams.set('autoplay','1');
-      if(button.dataset.provider==='soundcloud')url.searchParams.set('auto_play','true');
-      const iframe=document.createElement('iframe');
-      iframe.src=url.href;
-      iframe.title=button.dataset.title!;
-      iframe.allow='autoplay; encrypted-media; fullscreen; picture-in-picture';
-      iframe.allowFullscreen=true;
-      iframe.referrerPolicy='strict-origin-when-cross-origin';
-      button.replaceWith(iframe);
-      iframe.focus();
-    },{once:true});
-  });
-</script>
