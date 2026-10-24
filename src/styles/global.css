@@ -177,6 +177,8 @@ h6 { font-size: var(--heading-6); }
 .contact-email-area { text-align: center; padding-bottom: 56px; }
 .contact-email span { min-width: 0; overflow-wrap: anywhere; }
 .social-icon { flex: 0 0 18px; }
+.social-icon-handdrawn { display: block; flex-basis: 18px; width: 18px; height: 18px; object-fit: contain; mix-blend-mode: multiply; }
+a:not(.email-cta):hover .social-icon-handdrawn { opacity: .55; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 12px 26px; }
 .project-text-only { grid-template-columns: 1fr; border-top: 1px solid var(--line); padding-top: 48px; }
 .project-text-only .project-copy { max-width: 780px; }
