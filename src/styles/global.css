@@ -65,6 +65,10 @@ nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: 
 }
 .content { padding-top: 35px; padding-bottom: 90px; min-height: 40vh; }
 .hero img { display: block; width: 100%; }
+@media (max-width: 959px) {
+  .content:has(> .hero) { max-width: none; padding: 0; }
+  .hero img { height: calc(100dvh - var(--mobile-header-height, 80px)); object-fit: cover; object-position: center; }
+}
 .prose p { margin: 0 0 24px; }
 .prose :is(strong, b) { font-weight: 700; }
 .prose :is(em, i) { font-style: italic; }

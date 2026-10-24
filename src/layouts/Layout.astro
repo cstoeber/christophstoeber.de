@@ -113,6 +113,15 @@ const structuredData={'@context':'https://schema.org','@graph':[
       window.addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(updateHeader);}},{passive:true});
       desktop.addEventListener('change',updateHeader);
       updateHeader();
+      if(header&&document.querySelector('.hero')){
+        const updateHeroHeight=()=>{
+          if(!desktop.matches&&button?.getAttribute('aria-expanded')!=='true'){
+            document.documentElement.style.setProperty('--mobile-header-height',`${header.getBoundingClientRect().height}px`);
+          }
+        };
+        new ResizeObserver(updateHeroHeight).observe(header);
+        updateHeroHeight();
+      }
     </script>
   </body>
 </html>
