@@ -231,9 +231,6 @@ footer a { text-decoration: none; }
   .contact-details { grid-template-columns: 1fr; gap: 22px; }
   .footer-inner { flex-direction: column; gap: 12px; }
 }
-@media (prefers-reduced-motion: no-preference) {
-  a { transition: color .18s ease, background-color .18s ease; }
-}
 @media (max-width: 767px) {
   .media-list { grid-template-columns: minmax(0, 1fr); }
   .contact-email-area { padding-bottom: 38px; }
