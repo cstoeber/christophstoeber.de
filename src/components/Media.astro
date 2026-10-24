@@ -1,5 +1,6 @@
 ﻿---
 import previews from '../data/media-previews.json';
+import ResponsiveImage from './ResponsiveImage.astro';
 interface Props {title:string;url:string;poster?:string|null;}
 const {title,url,poster}=Astro.props;
 const host=new URL(url).hostname;
@@ -10,7 +11,7 @@ const thumbnail=(poster?.startsWith('/')&&!poster.startsWith('//')?poster:undefi
 <div class="media-entry" data-provider={type} data-url={url} data-title={title}>
   <div class:list={['media',type]}>
     <button class="media-preview has-thumbnail" type="button" aria-haspopup="dialog" aria-label={`${title} – ${provider} laden`}>
-      <img src={thumbnail} alt="" loading="lazy"/>
+      <ResponsiveImage src={thumbnail} alt="" loading="lazy" decoding="async" layout="preview"/>
       <span class="media-play" aria-hidden="true">▶</span>
       <span class="media-caption"><span>{title}</span><span class="media-load-label">{provider} laden</span></span>
     </button>

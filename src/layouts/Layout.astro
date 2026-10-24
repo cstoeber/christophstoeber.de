@@ -11,6 +11,7 @@ import settings from '../data/settings.json';
 import SocialIcon from '../components/SocialIcon.astro';
 import EmailCTA from '../components/EmailCTA.astro';
 import MediaConsentDialog from '../components/MediaConsentDialog.astro';
+import ResponsiveImage from '../components/ResponsiveImage.astro';
 import navigationSettings from '../data/navigation.json';
 import {getCollection} from 'astro:content';
 import {resolveNavigation} from '../lib/navigation';
@@ -70,11 +71,11 @@ const structuredData={'@context':'https://schema.org','@graph':[
     <a class="skip-link" href="#inhalt">Zum Inhalt</a>
     <header class="header">
       <div class="header-inner">
-        <a class="site-title" href="/" aria-label={`${settings.title} – Start`}>{titleParts.map((part,index)=><>{index>0&&<img class="title-image" src="/images/astronaut-button.png" alt="" width="32" height="32"/>}{part}</>)}</a>
+        <a class="site-title" href="/" aria-label={`${settings.title} – Start`}>{titleParts.map((part,index)=><>{index>0&&<ResponsiveImage class="title-image" sizes="40px" src="/images/astronaut-button.png" alt="" width="32" height="32"/>}{part}</>)}</a>
         <button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navigation"><span></span><span></span><span></span></button>
         <div class="navigation-row"><nav id="navigation" aria-label="Hauptnavigation">
           <ul>{navigation.items.map(({href,label})=><li><a href={href} aria-current={Astro.url.pathname===href?'page':undefined}>{label}</a></li>)}</ul>
-        </nav><a class="compact-title" href="/" aria-label={`${settings.title} – Start`} inert>{titleParts.map((part,index)=><>{index>0&&<img class="title-image" src="/images/astronaut-button.png" alt="" width="24" height="24"/>}{part}</>)}</a></div>
+        </nav><a class="compact-title" href="/" aria-label={`${settings.title} – Start`} inert>{titleParts.map((part,index)=><>{index>0&&<ResponsiveImage class="title-image" sizes="40px" src="/images/astronaut-button.png" alt="" width="24" height="24"/>}{part}</>)}</a></div>
       </div>
     </header>
     <main id="inhalt" class="content" tabindex="-1"><slot /></main>

@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "build": "node scripts/create-cms-config.mjs && node scripts/sync-media-previews.mjs && astro check && astro build",
+    "dev": "node scripts/generate-responsive-images.mjs && astro dev",
+    "build": "node scripts/create-cms-config.mjs && node scripts/sync-media-previews.mjs && node scripts/generate-responsive-images.mjs && astro check && astro build",
     "test": "node --experimental-strip-types --test tests/*.test.mjs",
     "preview": "astro preview",
     "cms": "decap-server",
@@ -21,6 +21,7 @@
     "astro": "^7.4.2",
     "cheerio": "^1.1.2",
     "decap-server": "^3.0.0",
+    "sharp": "0.35.5",
     "turndown": "^7.2.2",
     "typescript": "^5.9.3",
     "yaml": "^2.9.1"

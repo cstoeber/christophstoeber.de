@@ -3,6 +3,7 @@ import {getCollection} from 'astro:content';
 import {createMarkdownProcessor} from '@astrojs/markdown-remark';
 import editorialLayout from '../../scripts/rehype-editorial-layout.mjs';
 import Media from './Media.astro';
+import ResponsiveImage from './ResponsiveImage.astro';
 const processor=await createMarkdownProcessor({rehypePlugins:[editorialLayout]});
 const entries=(await getCollection('mediaSections')).filter(section=>section.data.published).sort((a,b)=>a.data.order-b.data.order||a.data.title.localeCompare(b.data.title,'de'));
 const sections=await Promise.all(entries.map(async section=>({...section,html:(await processor.render(section.body||'')).code})));
@@ -13,7 +14,7 @@ const sections=await Promise.all(entries.map(async section=>({...section,html:(a
     {section.html&&<div class="project-richtext" set:html={section.html}/>}
     {section.data.videos.length>0&&<div class="media-list">{section.data.videos.map(video=><Media {...video}/>)}</div>}
     {section.data.images.length>0&&<div class="media-gallery">{section.data.images.map(image=><figure>
-      <img src={image.image} alt={image.alt} loading="lazy"/>
+      <ResponsiveImage src={image.image} alt={image.alt} loading="lazy" decoding="async" layout="gallery"/>
       {(image.caption||image.copyright)&&<figcaption>{image.caption&&<span>{image.caption}</span>}{image.copyright&&<span>{image.copyright}</span>}</figcaption>}
     </figure>)}</div>}
   </section>)}

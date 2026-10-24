@@ -3,6 +3,7 @@ import {getCollection} from 'astro:content';
 import {createMarkdownProcessor} from '@astrojs/markdown-remark';
 import Media from './Media.astro';
 import SocialIcon from './SocialIcon.astro';
+import ResponsiveImage from './ResponsiveImage.astro';
 import editorialLayout from '../../scripts/rehype-editorial-layout.mjs';
 const processor=await createMarkdownProcessor({rehypePlugins:[editorialLayout]});
 const entries=(await getCollection('projects')).filter(project=>project.data.published).sort((a,b)=>a.data.order-b.data.order||a.data.title.localeCompare(b.data.title,'de'));
@@ -12,7 +13,7 @@ const mediaSections=(await getCollection('mediaSections')).filter(section=>secti
 <div class="projects-list">
   {projects.map(project=><section class:list={['project-section',{'project-text-only':!project.data.image}]} id={project.id}>
     {project.data.image&&<figure>
-      <img src={project.data.image} alt={project.data.imageAlt} loading="lazy" />
+      <ResponsiveImage src={project.data.image} alt={project.data.imageAlt} loading="lazy" decoding="async" layout="project"/>
       {(project.data.caption||project.data.copyright)&&<figcaption>{project.data.caption&&<span>{project.data.caption}</span>}{project.data.copyright&&<span>{project.data.copyright}</span>}</figcaption>}
     </figure>}
     <div class="project-copy"><h2>{project.data.title}</h2><div class="project-richtext" set:html={project.html}/>

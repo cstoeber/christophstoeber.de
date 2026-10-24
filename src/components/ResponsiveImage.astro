@@ -1,0 +1,9 @@
+---
+import type {HTMLAttributes} from 'astro/types';
+import {responsiveImageAttributes,heroImageSizes,imageSizes} from '../../scripts/responsive-image-attributes.mjs';
+interface Props extends HTMLAttributes<'img'> {src:string;alt:string;layout?:'hero'|'project'|'gallery'|'preview';}
+const {src,layout='project',...attributes}=Astro.props;
+const sizes=attributes.sizes||(layout==='hero'?heroImageSizes(src):imageSizes[layout]);
+const responsive=responsiveImageAttributes(src,sizes);
+---
+<img {...attributes} {...responsive}/>

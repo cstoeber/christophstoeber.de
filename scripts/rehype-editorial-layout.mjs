@@ -1,4 +1,5 @@
 // Preserve Markdown order; standalone pictures become figures in place.
+import {responsiveImageAttributes,imageSizes} from './responsive-image-attributes.mjs';
 export default function editorialLayout() {
   return tree => {
     const element=(tagName,children,className)=>({type:'element',tagName,properties:className?{className:[className]}:{},children});
@@ -6,6 +7,9 @@ export default function editorialLayout() {
     const text=node=>node.type==='text'?node.value:(node.children||[]).map(text).join('');
     const isPicture=node=>node.tagName==='img'||(node.tagName==='a'&&meaningful(node.children||[]).length===1&&node.children.some(child=>child.tagName==='img'));
     function visit(parent){
+      if(parent.tagName==='img'&&typeof parent.properties?.src==='string'){
+        parent.properties={...parent.properties,...responsiveImageAttributes(parent.properties.src,imageSizes.richtext),loading:'lazy',decoding:'async'};
+      }
       if(!parent.children)return;
       const output=[];
       for(let i=0;i<parent.children.length;i++){

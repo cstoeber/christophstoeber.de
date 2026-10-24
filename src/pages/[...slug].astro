@@ -10,6 +10,7 @@ import Events from '../components/Events.astro';
 import settings from '../data/settings.json';
 import EmailCTA from '../components/EmailCTA.astro';
 import MediaSections from '../components/MediaSections.astro';
+import ResponsiveImage from '../components/ResponsiveImage.astro';
 export async function getStaticPaths() {
   const pages=[...await getCollection('pages'),...await getCollection('legal')];
   return pages.map(page=>({params:{slug:page.id==='start'?undefined:page.id},props:{page}}));
@@ -22,7 +23,7 @@ const videos='videos' in page.data?page.data.videos:[];
 const inquiry='inquiry' in page.data?page.data.inquiry:undefined;
 ---
 <Layout title={page.data.title} description={description}>
-  {page.collection==='pages' && page.id==='start' ? <><h1 class="visually-hidden">{settings.title}</h1><figure class="hero"><img src={page.data.hero} alt={page.data.heroAlt} width="1820" height="1213" fetchpriority="high" /></figure></> : <article class:list={['prose',page.id]}><h1>{page.data.title}</h1><div class="page-copy" set:html={code} />
+  {page.collection==='pages' && page.id==='start' ? <><h1 class="visually-hidden">{settings.title}</h1><figure class="hero"><ResponsiveImage src={page.data.hero!} alt={page.data.heroAlt||''} layout="hero" fetchpriority="high" loading="eager" /></figure></> : <article class:list={['prose',page.id]}><h1>{page.data.title}</h1><div class="page-copy" set:html={code} />
     {page.id==='termine' && <Events />}
     {page.id==='projekte' && <Projects />}
     {page.id==='musik-videos' && <MediaSections />}
