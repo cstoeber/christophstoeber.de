@@ -97,6 +97,9 @@ h6 { font-size: var(--heading-6); }
   .prose .richtext-image img { max-width: 100%; margin: 0; }
 }
 .richtext-image figcaption, .project-section figcaption { display: grid; gap: 2px; font: 12px/1.6 'Karla', sans-serif; color: var(--muted); margin-top: 10px; }
+@media (max-width: 959px) {
+  .lebenslauf .richtext-image figcaption { text-align: left; }
+}
 .projects-list { display: grid; gap: 85px; }
 .project-section { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 48px; }
 .project-section figure img { width: 100%; }
